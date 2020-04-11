@@ -54,7 +54,7 @@
   text-align: center;
   margin: 40px 0;
   color: #a7a7a7;
-  
+
 }
 button.accordion {
   margin-bottom: 25px;
@@ -84,7 +84,7 @@ button.accordion:hover {
 button.accordion:after {
 
 /* Unicode character for "plus" sign
-(+) is '\02795' */ 
+(+) is '\02795' */
 
   content: '\02795';
   font-size: 13px;
@@ -97,7 +97,7 @@ button.accordion:after {
 button.accordion.active:after {
 
 /* Unicode character for "minus" sign
-(-) is '\2796' */ 
+(-) is '\2796' */
 
   content: "\2796";
 }
@@ -112,7 +112,7 @@ div.panel {
   opacity: 0;
   max-height: 0;
   direction: rtl;
-  
+
 }
 
 .panel p{
@@ -148,19 +148,19 @@ background-color: rgba(249,249,249);
 
 /* Track */
 ::-webkit-scrollbar-track {
-  box-shadow: inset 0 0 5px grey; 
+  box-shadow: inset 0 0 5px grey;
   border-radius: 10px;
 }
- 
+
 /* Handle */
 ::-webkit-scrollbar-thumb {
-  background:  rgb(2, 61, 121);  
+  background:  rgb(2, 61, 121);
   border-radius: 10px;
 }
 
 /* Handle on hover */
 ::-webkit-scrollbar-thumb:hover {
-  background: rgb(2, 33, 65);  
+  background: rgb(2, 33, 65);
 }
 /*-------------------fin kabl rihla*/
 .ml5{
