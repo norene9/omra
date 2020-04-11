@@ -1,22 +1,16 @@
 {
-  "name": "hadj-omra-project",
+  "name": "projet_test",
   "version": "1.0.0",
   "description": "",
-  "main": "index.js",
+  "main": "server.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/Hadj-OmraGuidTeam/Hadj-Omra-Project.git"
-  },
   "author": "",
   "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/Hadj-OmraGuidTeam/Hadj-Omra-Project/issues"
-  },
-  "homepage": "https://github.com/Hadj-OmraGuidTeam/Hadj-Omra-Project#readme",
   "dependencies": {
+    "body-parser": "^1.19.0",
+    "ejs": "^3.0.2",
     "express": "^4.17.1"
   }
 }

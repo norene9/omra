@@ -1,0 +1,113 @@
+@media only screen and (max-width: 768px) {
+  header .navbar-brand {
+    padding-left: 7rem;
+  }
+  .section-1 .row .col-md-6 .panel {
+    position: initial;
+    width: initial;
+    height: initial;
+  }
+  .section-2 .cover {
+    background-position: -25vmin -10vmin;
+  }
+  .numbers .rect {
+    width: 10rem;
+    height: 8rem;
+  }
+  .numbers .rect h1 {
+    font-size: 2rem;
+  }
+
+  .section-3 {
+    height: inherit;
+    padding: 10vmin !important;
+  }
+  .section-3 .row h1 {
+    padding: 6vmin 4vmin;
+  }
+  .section-3 .platform .col-md-6 {
+    text-align: center !important;
+  }
+  .section-3 .desktop i {
+    font-size: 8vmin;
+  }
+  .section-4 .carousel-item {
+    padding-left: 0.6rem;
+  }
+  footer .row .col-md-2 {
+    margin-top: 8vmin;
+  }
+}
+
+/* screen size 375px */
+
+@media only screen and (max-width: 375px) {
+  .section-4 .card {
+    width: 18em;
+  }
+}
+
+@media only screen and (max-width: 320px) {
+  .section-4 .carousel-inner {
+    margin-left: -4vmin;
+  }
+}
+
+
+
+@media (max-width: 767px) {
+  header .row .col-md-5 { 
+   margin-top: -140px;
+  }
+}
+
+
+
+@media (max-width: 767px) {
+  .loisirsection{  
+  margin-top: 900px;
+    }
+}
+
+@media (max-width: 767px) {
+  #wrap{  
+   margin-left: 218px;
+      }
+}
+@media (max-width: 767px) {
+  .portfolio_section .containerport .box{  
+      margin-left: -100px;
+    }
+}
+
+@media (max-width: 767px) {
+  .portfolio_section .containerport .box2{  
+      margin-left: -100px;
+    }
+}
+
+ /* media query pour manasik*/  
+ @media (max-width: 767px) {
+  .card{  
+   margin-bottom: 60px;
+  margin-top: -30px;
+    margin-bottom: 60px;
+    margin-left: 130px;  
+}
+}
+
+
+@media (max-width: 767px) {
+  .containermanasik .card2{ 
+   
+     margin-left: 128px;
+    margin-bottom: 90px;
+}
+}
+
+ @media (max-width: 767px) {
+  .card2{  
+ 
+    margin-left: -130px;  
+}
+}
