@@ -46,12 +46,12 @@ header a {
 
 .dropdown:hover .dropdown-content {
   display: block;
-  
+
 }
 
 header .nav-item:last-child {
   padding-right: 10.5em;
-    
+
 }
 
 header .nav-item {
@@ -83,12 +83,12 @@ header .row .col-md-5 img {
 
 header {
   background: var(--bggradient);
-   
+
 }
 
 header .container .col-md-7 {
   font-family: "Rubik", sans-serif;
-    
+
 }
 
 header .container .col-md-7 h6 {
@@ -122,7 +122,7 @@ header .container .col-md-7 p {
   -moz-transform: rotate(355deg);
   -ms-transform: rotate(355deg);
   -o-transform: rotate(355deg);
-  transform: rotate(355deg);  
+  transform: rotate(355deg);
 }
 
 
@@ -478,7 +478,7 @@ footer .column i + i {
     border-radius: 30px;
  height: 33px;
 
-} 
+}
 .snip1482:hover img,
 .snip1482.hover img {
   width: 70%;
@@ -640,7 +640,7 @@ footer .column i + i {
 }
 
 #wrap p:nth-child(7) {
- 
+
    -webkit-animation-delay: .5s;
    -moz-animation-delay: .5s;
    -ms-animation-delay: .5s;
@@ -869,7 +869,7 @@ box-shadow: 0px 0px 15px rgba(56,56,56,.2);
   margin-left: -300px;
 }
 .loisirsection{
-      
+
 }
 /* end of loisir*/
 
@@ -973,5 +973,12 @@ box-shadow: 0px 0px 15px rgba(56,56,56,.2);
 	 justify-content: center;
 	 align-items: center;
 }
- 
+
+.loisirsection{
+  margin-top: 200px;
+}
+
+.section-2 .container-fluid{
+      margin-top: 300px;
+}
 /* pour manasik_card*/
