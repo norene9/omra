@@ -18,8 +18,17 @@ app.set('view engine', 'ejs')
 app.get('/', (request, response) => {
   response.render('Home page/index')
 })
+
 app.get('/avant_voyage', (request, response) => {
   response.render('Home page/avant_voyage')
+})
+
+app.get('/signup', (request, response) => {
+  response.render('Home page/signup')
+})
+
+app.get('/manasik_omra', (request, response) => {
+  response.render('Home page/manasik_omra')
 })
 
 app.post('/', (request, response) => {
