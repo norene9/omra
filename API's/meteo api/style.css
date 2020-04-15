@@ -1,0 +1,293 @@
+
+
+
+
+.col-3{
+ 
+  
+  margin: 0px 20px;
+  text-align: right;
+  position: relative; /* necessary to give position: relative to parent. */
+}
+
+input[type="text"]{ float: left; 
+  font: 22px/25px "Lato", Arial, sans-serif;
+  color: #000000;width: 400px;
+  box-sizing: border-box;
+  letter-spacing: 1px;
+}
+.effect-1{
+   
+    float: right;
+  border: 0;
+  padding: 4px 0;
+  border-bottom: 1px solid #000000; border-width: 1px ; 
+  background-color: transparent;
+}
+
+.effect-2{ margin-top:  10px; 
+    float: left;
+    text-align: right;
+color: #000000 !important;
+ font-size: 1.3em;
+background: #696969;
+padding: 7px;
+display: inline-block;
+border: 0px ;
+transition: all 0.4s ease 0s;}
+
+.effect-2:hover {
+text-transform: uppercase;
+background: #C0C0C0 ;
+letter-spacing: 1px;
+-webkit-box-shadow: 0px 5px 40px -10px rgba(0,0,0,0.57);
+-moz-box-shadow: 0px 5px 40px -10px rgba(0,0,0,0.57);
+box-shadow: 5px 40px -10px rgba(0,0,0,0.57);
+transition: all 0.4s ease s;
+}
+
+ 
+.effect-1 ~ .focus-border{
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 0;
+  height: 2px;
+  background-color: #3399FF;
+  transition: 0.4s;
+}
+.effect-1:focus ~ .focus-border,
+.has-content.effect-1 ~ .focus-border{
+  width: 100%;
+  transition: 0.4s;
+}
+
+.effect-1 ~ label{
+  position: absolute;
+  left: 0;
+  width: 100%;
+  top: 9px;
+  color: #aaa;
+  transition: 0.3s;
+  z-index: -1;
+  letter-spacing: 0.5px;
+}
+
+.effect-1:focus ~ label,
+.has-content.effect-1 ~ label{
+  top: -16px;
+  font-size: 12px;
+  color: #000000;
+  transition: 0.3s;
+}
+
+
+
+
+
+ 
+
+
+
+
+
+     
+    
+.clear { background-image: url("./pics/clear.jpg");
+  background-repeat: no-repeat; 
+  -webkit-background-size: cover; /* pour anciens Chrome et Safari */
+  background-size: cover;
+}
+
+.clouds , .cloudy, .haze , .sprinkle{  
+  background-image: url("./pics/clouds.jpg");
+  background-repeat: no-repeat; 
+  -webkit-background-size: cover; /* pour anciens Chrome et Safari */
+  background-size: cover; 
+}
+
+
+.rain { 
+  background-image: url("./pics/ob_846680_400w9.gif"); 
+background-repeat: no-repeat; 
+  -webkit-background-size: cover; /* pour anciens Chrome et Safari */
+  background-size: cover; }
+.snow , .sleet { 
+  background-image: url("./pics/snow.gif");
+  background-repeat: no-repeat; 
+  -webkit-background-size: cover; /* pour anciens Chrome et Safari */
+  background-size: cover; 
+}
+.hot { 
+  background-image: url("./pics/Hot.jpg"); 
+background-repeat: no-repeat; 
+  -webkit-background-size: cover; /* pour anciens Chrome et Safari */
+  background-size: cover; }
+  .sunny { 
+  background-image: url("./pics/nB460uc.jpg"); 
+background-repeat: no-repeat; 
+  -webkit-background-size: cover; /* pour anciens Chrome et Safari */
+  background-size: cover; }
+.Lightning{
+background-image: url("./pics/Lightning.jpg"); 
+background-repeat: no-repeat; 
+  -webkit-background-size: cover; /* pour anciens Chrome et Safari */
+  background-size: cover;
+}
+.mist,.sleet  {
+  background-image: url("./pics/mist.gif"); 
+background-repeat: no-repeat; 
+  -webkit-background-size: cover; /* pour anciens Chrome et Safari */
+  background-size: cover;
+} 
+body {text-align: center;
+ 
+   line-height: 2em;
+   /*overflow:  hidden;
+   display: flex;*/
+   justify-content: center;
+   /*align-items: center;*/
+   background-image: url("./pics/s.jpg");
+   background-repeat: no-repeat ; 
+  -webkit-background-size: cover; /* pour anciens Chrome et Safari */
+  background-size: cover; 
+
+}
+
+h1 {
+  font-size: 1.8em;
+}
+ 
+i.wi#cc {
+  font-size: 6em;
+  
+
+} 
+h2.i.wi {
+  font-size: 3em;
+  
+
+} 
+h2 {
+  font-size: 1.8em;
+}
+
+.more{
+  font-size: 2em;
+}
+table{
+ /* - moitié de la largeur */
+    position: center;
+    
+  margin:auto;
+  filter:alpha(opacity=70); -moz-opacity:0.7; opacity: 0.7;
+  font-family: "Rimouski";
+ background-color:  #C0C0C0;
+ border-width: 13px ; 
+}
+
+td  { 
+  background-color: #F4F9FF;height: 60px; width: 700px;
+}
+tr :hover {
+background-color: #f8d7da;
+
+}
+
+
+ html {
+  animation-duration: 4s;
+  animation-name: slidein;
+}
+
+@keyframes slidein {
+  from {
+    margin-left: 100%;
+    width: 300%; 
+  }
+
+  to {
+    margin-left: 0%;
+    width: 100%;
+  }
+}
+span#date_heure{
+ 
+   float: left;
+
+   color: #000000;
+   font-size: large;
+    
+    
+    font-family: "Rimouski";
+ 
+
+ 
+}
+
+
+.container{
+ 
+  width :100%;
+  justify-content :center;
+  align-items :center;
+  display :flex;
+}
+.text{
+  font-size: 4em;
+  font-weight :100;
+  font-size :32px;
+  
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*<table>
+  <tr><td><span id="wind" ></span></td> 
+  <td> <span id="humidity" ></span></td>
+    <td><span id="visibility" ></span></td></tr>
+  </table>*/
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*<table>
+  <tr><td><span id="wind" ></span></td> 
+  <td> <span id="humidity" ></span></td>
+    <td><span id="visibility" ></span></td></tr>
+  </table>*/
+
+
+
+
+
+
+
+
+/*<table>
+  <tr><td><span id="wind" ></span></td> 
+  <td> <span id="humidity" ></span></td>
+    <td><span id="visibility" ></span></td></tr>
+  </table>*/

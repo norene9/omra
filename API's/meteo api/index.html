@@ -1,0 +1,63 @@
+<!DOCTYPE html DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="fr">
+
+<head >  
+    <meta charset="UTF-8">
+    <title>Weather App - JavaScript</title>
+      <script src="http://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <link rel="stylesheet" href="style.css">
+     <script type="text/javascript" src="date_heure.js"></script>
+     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/weather-icons/2.0.10/css/weather-icons.min.css">
+    
+</head>
+<body>
+	<span id="date_heure"  alt=""></span>
+<script type="text/javascript">window.onload = date_heure('date_heure');</script>
+  
+
+
+<br><br>
+<section id="app"></section>
+<br> 
+  
+   	 <i class="wi" id="cc"></i> 
+     <h2> <i class="wi wi-thermometer"></i> 
+   	 <span id="temperature"></span> C°
+   	 <br>  <span id="conditions"> 
+
+      <div class="container">
+     <div class="text"></div>
+        </div>
+
+   	 </span> 
+   	 
+
+    </h2>
+
+
+      <h1> <span id="ville"></span>  </h1>
+ <br><br>
+ 
+ <div class="col-3 input-effect"><br>
+     <input class="effect-1" id="queryLoc" type="text" value="Saisir la ville,pays">   
+     <br> <br>  
+        <input class="effect-2" type="button" value="Voir la Meteo detaillee " onclick="buttonClickGET()"><br><br><br>
+            </div> 
+    
+       
+     
+    
+    <br><br><br><br> 
+
+
+    </div>  
+  <p id="zone_meteo"></p> 
+          <br>
+   
+      
+       
+           
+    
+    <script src="app.js"></script>
+</body>
+</html>
