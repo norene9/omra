@@ -1,0 +1,114 @@
+* {box-sizing: border-box}
+body {font-family: Verdana, sans-serif; margin:0}
+
+/* Slideshow container */
+.slideshow-container {
+  width: 80%;
+  margin: 15px auto;  
+  position: relative;
+  background: #f5f5dc59;
+  border-radius: 15px;
+  height: 600px;
+  overflow: auto;
+  direction: rtl;
+  
+}
+.img_doaa{
+    text-align: center;
+        margin-top: 70px;
+        margin-bottom: 40px;
+}
+.img_doaa img{
+    height: 300px;
+}
+
+/* Slides */
+.mySlides {
+  display: none;
+  padding: 80px;
+  text-align: center;
+}
+
+
+/* On hover, add a black background color with a little bit see-through */
+
+/* The dot/bullet/indicator container */
+.dot-container {
+    border-radius: 15px;
+    text-align: center;
+    padding: 20px;
+    background: #ddd;
+    width: 80%;
+    margin: auto;  
+        margin-top: 50px;
+        margin-bottom: 40px;
+}
+
+/* The dots/bullets/indicators */
+.dot1 {
+    font-size: 25px;
+    color: white;
+    cursor: pointer;
+    width: 180px;
+    height: 42px;
+    margin: 2px 2px;
+    background-color: dodgerblue;
+    border-radius: 8px;
+    display: inline-block;
+    transition: background-color 0.6s ease;
+}
+.dot1:hover {
+   color: dodgerblue;
+    background-color: white; 
+}
+
+.dot {
+   
+  cursor: pointer;
+  height: 15px;
+  width: 15px;
+  margin: 0 2px;
+  background-color: #bbb;
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.6s ease;
+}
+
+.active, .dot:hover {
+  background-color: dodgerblue;
+}
+
+/* Add an italic font style to all quotes */
+q {font-style: italic;}
+
+/* Add a blue color to the author */
+.author {color: cornflowerblue;}
+
+.doaa{
+    
+    border-right-width: 12px;
+    border-right-style: inset;
+    border-right-color: dodgerblue;
+    border-radius: 8px;
+    width: 90%;
+    margin: auto;
+    margin-top: 10px;
+    box-shadow: -6px 6px 6px black;
+    direction: rtl;
+}
+.doaa p{
+    padding:10px 15px ;
+    margin: 0px;
+    
+}
+
+@media screen and ( max-width:600px)
+{
+    .slideshow-container,.dot-container{
+      width: 95%;
+    }
+    .dot1{
+        width: 140px;
+    }
+  
+}
