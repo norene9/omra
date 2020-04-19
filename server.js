@@ -33,7 +33,9 @@ app.get('/signup', (request, response) => {
 app.get('/manasik_omra', (request, response) => {
   response.render('Home page/manasik_omra')
 })
-
+app.get('/signup', (request, response) => {
+  response.render('Home page/signup')
+})
 app.post('/', (request, response) => {
   console.log(request.body);
   if (request.body.message === undefined || request.body.message === '') {
