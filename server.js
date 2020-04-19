@@ -1,20 +1,23 @@
+//---------------Dependencies-----------------
 let express = require('express')
-let app = express()
 let bodyParser = require('body-parser')
+//--------------------------------------------
 
+let app = express()
 
-//middelware
+//--------------------(middelware)-----------------------
 app.use(bodyParser.urlencoded({ extended: false }))
 app.use(bodyParser.json())
+//this calling api.js which is contain sql commandes
+app.use('/api',require('./api'))
+//this for calling the static files .js .css images
 app.use('/', express.static('assets'))
-
-
+//--------------------------------------------------------
 
 //moteur de view
 app.set('view engine', 'ejs')
 
-
-//Routes
+//-------------(Routes for pages)------------------------
 app.get('/', (request, response) => {
   response.render('Home page/index')
 })
@@ -37,4 +40,9 @@ app.post('/', (request, response) => {
     response.redirect('/')
   }
 })
-app.listen(8080)
+//----------------------------------------------------------------------
+
+//Listing to the server
+app.listen(8080, ()=>{
+  console.log('Server is running on port 8080...');
+})

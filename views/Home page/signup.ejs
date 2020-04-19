@@ -16,7 +16,11 @@
 <body>
    <div class="container" id="container">
       <div class="form-container sign-up-container">
-         <form action="#">
+         <form action="http://localhost:8080/api/register" method="post">
+           <!--*http://localhost:8080/register this url for get the router and excute
+               the function (register add someone)
+               *method Post just to be able to get the infos from <input>
+                using there names:'name';'mail';'password'  -->
             <h1>Create Account</h1>
             <div class="social-container">
                <a href="#" class="social"><i class="fab fa-facebook-f fa-2x"></i></a>
@@ -27,11 +31,11 @@
             <span class="input-item">
                <i class="fa fa-user fa-2x"></i>
             </span>
-            <input type="text" placeholder="Name"></input>
+            <input type="text" placeholder="Name" name="name"></input>
             <span class="input-item">
                <i class="fas fa-envelope fa-2x"></i>
             </span>
-            <input type="email" placeholder="Email"></input>
+            <input type="email" placeholder="Email" name="mail"></input>
             <span class="input-item">
                <i class="fa fa-key fa-2x"></i>
             </span>
@@ -44,7 +48,11 @@
          </form>
       </div>
       <div class="form-container sign-in-container">
-         <form action="#">
+         <form action="http://localhost:8080/api/login" method="post">
+           <!--*http://localhost:8080/login this url for get the router and excute
+               the function (login)
+               *method Post just to be able to get the infos from <input>
+                using there names:'mail2';'password2'  -->
             <h1>Sign in</h1>
             <div class="social-container">
                <a href="#" class="social"><i class="fab fa-facebook-f fa-2x"></i></a>
@@ -55,7 +63,7 @@
             <span class="input-item">
                <i class="fas fa-envelope fa-2x"></i>
             </span>
-            <input type="email" placeholder="Email" class="spaceholder">
+            <input type="email" placeholder="Email" class="spaceholder" name="mail2">
 
             </input>
             <span class="input-item">
