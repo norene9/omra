@@ -1,0 +1,262 @@
+/*pour la section météo*/
+.meteo{
+        margin-top: 150px;
+      margin-left: 308px;
+}
+.col-3{
+  margin: 0px 20px;
+  text-align: right;
+  position: relative;
+  margin-top: -34px; /* necessary to give position: relative to parent. */
+}
+input[type="text"]{ float: left; 
+  font: 22px/25px "Lato", Arial, sans-serif;
+  color: #000000;
+  width: 299px;
+  box-sizing: border-box;
+  letter-spacing: 1px;
+  margin-left: 100px;
+      padding-left: 56px;
+    margin-top: -26px;
+}
+::placeholder{
+  font: 22px/25px "Lato", Arial, sans-serif;
+  color: #000000;
+  width: 400px;
+  box-sizing: border-box;
+  letter-spacing: 1px;
+}
+.effect-1{
+    float: right;
+  border: 0;
+  padding: 4px 0;
+  border-bottom: 1px solid #cbe1fb; border-width: 1px ; 
+  background-color: transparent;
+}
+
+.effect-2{ margin-top:  10px; 
+    float: left;
+    text-align: right;
+color: #000000 !important;
+ font-size: 1.3em;
+background: #696969;
+padding: 7px;
+display: inline-block;
+border: 0px ;
+transition: all 0.4s ease 0s;}
+.effect-2:hover {
+text-transform: uppercase;
+background: #C0C0C0 ;
+letter-spacing: 1px;
+-webkit-box-shadow: 0px 5px 40px -10px rgba(0,0,0,0.57);
+-moz-box-shadow: 0px 5px 40px -10px rgba(0,0,0,0.57);
+box-shadow: 5px 40px -10px rgba(0,0,0,0.57);
+transition: all 0.4s ease s;
+}
+.effect-1 ~ .focus-border{
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 0;
+  height: 2px;
+  background-color: #3399FF;
+  transition: 0.4s;
+}
+.effect-1:focus ~ .focus-border,
+.has-content.effect-1 ~ .focus-border{
+  width: 100%;
+  transition: 0.4s;
+}
+
+.effect-1 ~ label{
+  position: absolute;
+  left: 0;
+  width: 100%;
+  top: 9px;
+  color: #aaa;
+  transition: 0.3s;
+  z-index: -1;
+  letter-spacing: 0.5px;
+}
+.effect-1:focus ~ label,
+.has-content.effect-1 ~ label{
+  top: -16px;
+  font-size: 12px;
+  color: #000000;
+  transition: 0.3s;
+}
+.clear { background-image: url("/img/pics/clear.jpg");
+  background-repeat: no-repeat; 
+  -webkit-background-size: cover; /* pour anciens Chrome et Safari */
+  background-size: cover;
+}
+
+.clouds , .cloudy, .haze , .sprinkle{  
+  background-image: url("/img/pics/clouds.jpg");
+  background-repeat: no-repeat; 
+  -webkit-background-size: cover; /* pour anciens Chrome et Safari */
+  background-size: cover; 
+}
+.rain { 
+  background-image: url("/img/pics/ob_846680_400w9.gif"); 
+background-repeat: no-repeat; 
+  -webkit-background-size: cover; /* pour anciens Chrome et Safari */
+  background-size: cover; }
+.snow , .sleet { 
+  background-image: url("/img/pics/snow.gif");
+  background-repeat: no-repeat; 
+  -webkit-background-size: cover; /* pour anciens Chrome et Safari */
+  background-size: cover; 
+}
+.hot { 
+  background-image: url("./pics/Hot.jpg"); 
+background-repeat: no-repeat; 
+  -webkit-background-size: cover; /* pour anciens Chrome et Safari */
+  background-size: cover; }
+  .sunny { 
+  background-image: url("/img/pics/nB460uc.jpg"); 
+background-repeat: no-repeat; 
+  -webkit-background-size: cover; /* pour anciens Chrome et Safari */
+  background-size: cover; }
+.Lightning{
+background-image: url("/img/pics/Lightning.jpg"); 
+background-repeat: no-repeat; 
+  -webkit-background-size: cover; /* pour anciens Chrome et Safari */
+  background-size: cover;
+}
+.mist,.sleet  {
+  background-image: url("/img/pics/mist.gif"); 
+background-repeat: no-repeat; 
+  -webkit-background-size: cover; /* pour anciens Chrome et Safari */
+  background-size: cover;
+} 
+
+i.wi#cc {
+  font-size: 6em;
+ margin-left: 236px;
+} 
+.meteo h2.i.wi {
+  font-size: 3em;
+  margin-left: 181px;
+} 
+
+.more{
+  font-size: 2em;
+  margin-left: 181px;
+}
+.meteo table{
+ /* - moitié de la largeur */
+    position: center;
+  margin:auto;
+  filter:alpha(opacity=70); -moz-opacity:0.7; opacity: 0.7;
+  font-family: "Rimouski";
+ background-color:  #C0C0C0;
+ border-width: 13px ;
+     margin-top: -72px;
+    /* margin-left: -30px; */
+    margin-right: 325px;
+    float: right; 
+   
+}
+.meteo td  { 
+  background-color: #F4F9FF;height: 60px; width: 630px;
+}
+.meteo tr :hover {
+background-color: #f8d7da;
+}
+.meteo h1{
+       margin-left: 82px;
+}    
+.meteo h2{
+    margin-left: 131px;
+}   
+.meteo .wi{
+    margin-left: 109px;
+} 
+.meteo .mybtn{
+    margin-left: 7px;
+        margin-right: -118px;
+        color: black;
+        border: 1px solid #cbe1fb;
+}
+.meteo .mybtn:hover{
+   color: #fff;
+}
+
+@keyframes slidein {
+  from {
+    margin-left: 100%;
+    width: 300%; 
+  }
+
+  to {
+    margin-left: 0%;
+    width: 100%;
+  }
+}
+span#date_heure{  
+   color: #000000;
+   font-size: large;
+    font-family: "Rimouski"; 
+}
+.meteo.container{
+  width :100%;
+  justify-content :center;
+  align-items :center;
+  display :flex;
+}
+.meteo.text{
+  font-size: 4em;
+  font-weight :100;
+  font-size :32px;
+}
+
+
+
+
+
+
+
+
+/* <button class="mybtn" onclick="buttonClickGET()">Voir Météo</button>*/
+
+
+
+
+
+/*<table>
+  <tr><td><span id="wind" ></span></td> 
+  <td> <span id="humidity" ></span></td>
+    <td><span id="visibility" ></span></td></tr>
+  </table>*/
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*<table>
+  <tr><td><span id="wind" ></span></td> 
+  <td> <span id="humidity" ></span></td>
+    <td><span id="visibility" ></span></td></tr>
+  </table>*/
+
+
+
+
+
+
+
+
+/*<table>
+  <tr><td><span id="wind" ></span></td> 
+  <td> <span id="humidity" ></span></td>
+    <td><span id="visibility" ></span></td></tr>
+  </table>*/

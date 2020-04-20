@@ -1,0 +1,30 @@
+<%-include ('../pages/header')%>
+<a class="avatar">
+    
+  
+   <p>Question</p> <span><%= message.content %></span>
+<form action="/answer/<%=message.id%>" method="post" class=" ui for">
+    <div class="field">
+        <label for="message">Add an answer</label>
+        <textarea class="form-control" name="reply" id="message"  rows="3"></textarea>
+        <input type="submit" name="Submit" value="Submit" class="btn btn-primary" class="cs3_save">
+       
+    </div>
+    <br>
+</form>
+
+<h3>Commentaire</h3>
+<div class="form-group">
+    <div class="comment">
+        <% for (var i=1;i< answer.length;i++){%>
+        <% if(answer[i].qid==message.id) {%>
+    <p><%= answer[i].cont %></p>
+    <%} else {%>
+        <p></p>
+      <%}%>     
+<%}%>
+       
+          </div>
+         
+    
+  </div> 
