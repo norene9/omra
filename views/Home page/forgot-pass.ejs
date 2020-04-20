@@ -32,7 +32,7 @@
                 <span class="input-item">
                     <i class="fas fa-envelope fa-2x"></i>
                 </span>
-                <input type="email" placeholder="Email"></input>
+                <input type="email" placeholder="Email" ></input>
                 <span class="input-item">
                     <i class="fa fa-key fa-2x"></i>
                 </span>
@@ -45,7 +45,7 @@
             </form>
         </div>
         <div class="form-container sign-in-container">
-            <form action="#">
+            <form action="http://localhost:8080/forgotPSW" method="post">
                 <h3>Récupérer votre mot de passe</h3>
                 <div class="social-container">
                     <a href="#" class="social"><i class="fab fa-facebook-f fa-2x"></i></a>
@@ -57,18 +57,12 @@
                     <i class="fas fa-envelope fa-2x"></i>
                 </span>
                 <p>vous devez entrer votre email ici pour récupérer votre mot de passe</p>
-                <input type="email" placeholder="Email" class="spaceholder"></input>
-
-
+                <input type="email" placeholder="Email" class="spaceholder" name="forgot"></input>
                 <div data="checkbox-switch">
                     <input type="checkbox" id="switch" />
                     <label for="switch"></label>
-
                 </div>
-                <p style="font-size: 17px;     margin-bottom: 2px;
-    margin-top: -21px;">Checkbox</p>
-
-
+                <p style="font-size: 17px;margin-bottom: 2px;margin-top: -21px;">Checkbox</p>
                 <button>Envoyer <i class="fas fa-sign-in-alt fa-2x"></i></button>
             </form>
         </div>

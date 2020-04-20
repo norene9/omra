@@ -9,7 +9,7 @@ let app = express()
 app.use(bodyParser.urlencoded({ extended: false }))
 app.use(bodyParser.json())
 //this calling api.js which is contain sql commandes
-app.use('/api',require('./api'))
+app.use('/',require('./config/api'))
 //this for calling the static files .js .css images
 app.use('/', express.static('assets'))
 //--------------------------------------------------------
@@ -21,17 +21,26 @@ app.set('view engine', 'ejs')
 app.get('/', (request, response) => {
   response.render('Home page/index')
 })
-
 app.get('/avant_voyage', (request, response) => {
   response.render('Home page/avant_voyage')
 })
-
 app.get('/signup', (request, response) => {
   response.render('Home page/signup')
 })
-
 app.get('/manasik_omra', (request, response) => {
   response.render('Home page/manasik_omra')
+})
+app.get('/manasik_hadj', (request, response) => {
+  response.render('Home page/manasik-hadj')
+})
+app.get('/ad3iya', (request, response) => {
+  response.render('Home page/ad3iya')
+})
+app.get('/salat', (request, response) => {
+  response.render('Home page/salat')
+})
+app.get('/forgot', (request, response) => {
+  response.render('Home page/forgot-pass')
 })
 
 app.post('/', (request, response) => {

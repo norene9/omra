@@ -1,6 +1,8 @@
 <%- include ("header") %>
 
 <link rel="stylesheet" href="/css/gps_api.css">
+<link rel="stylesheet" href="/css/met.css">
+<link rel="stylesheet" href="/css/meteo.css">
   <main>
     <section class="section-1">
       <div class="container text-center">
@@ -128,8 +130,64 @@
       </section>
       <!------end of loisir-------->
 
+      <!------météo api------------------>
+    <section class="meteo">
+      <span id="date_heure" alt=""></span>
+      <script type="text/javascript">window.onload = date_heure('date_heure');</script>
+      <br><br>
+      <section class="meteo2">
+        <div class="containermet">
+          <div class="app-title">
+            <h1>Weather</h1>
+          </div>
+          <div class="notification"> </div>
+          <div class="weather-container">
+            <div class="weather-icon">
+              <img src="/img/icons/unknown.png" alt="">
+            </div>
+            <div class="temperature-value">
+              <p>- °<span>C</span></p>
+            </div>
+            <div class="temperature-description">
+              <p> - </p>
+            </div>
+            <div class="location">
+              <p>-</p>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!--------weather warda------>
+
+      <!-----------
+      <section id="app"></section>
+      <br>
+      <i class="wi" id="cc"></i>
+      <h2> <i class="wi wi-thermometer"></i>
+        <span id="temperature"></span> C°
+        <br> <span id="conditions">
+          <div class="container">
+            <div class="text"></div>
+          </div>
+        </span>
+      </h2>
+      <h1> <span id="ville"></span> </h1>
+      <br><br> --->
+      <!---------end weather warda---->
+      <div class="col-3 input-effect"><br>
+        <input class="effect-1" id="queryLoc" type="text" placeholder="Saisir la ville,pays">
+        <br> <br>
+        <button class="mybtn" onclick="buttonClickGET()">Voir Météo</button>
+      </div>
+      <br><br><br><br>
+      </div>
+      <p id="zone_meteo"></p>
+      <br>
+    </section>
+    <!--------end of météo api---->
+
+<!-------currency convert--------->
       <section class="sectiondiv">
-        <!-------currency convert--------->
         <div class="currency-container">
 
           <div class="containercur">
@@ -143,8 +201,8 @@
             <ul class="add-currency-list"></ul>
           </div>
         </div>
-        <!------currency convert------>
       </section>
+<!------end currency convert------>
     </section>
 
     <!-------------------------( GPS )--------------------------------------------------->
@@ -211,14 +269,19 @@
 <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
   integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous">
   </script>
-
-
+  <script type='text/javascript'
+    src='http://www.bing.com/api/maps/mapcontrol?callback=GetMap&key=An-DQwMckibyuZ0q93OLo5kSNITR6VevW6-zy4NGjlLPGxMLljye2k7SZHXRF1oU'
+    async defer></script>
 
 
 <!------------ JS Files -------------->
 <script src="/js/main.js"></script>
 <script src="/js/currency.js"></script>
 <script src="/js/gps_api.js"></script>
+<script src="/js/date-heure.js"></script>
+<script src="/js/meteo.js"></script>
+<script src="/js/met.js"></script>
+<script src="/js/map.js"></script>
 <!------------------------------------->
 
 <%- include ("footer") %>

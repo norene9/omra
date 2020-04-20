@@ -16,7 +16,7 @@
 <body>
    <div class="container" id="container">
       <div class="form-container sign-up-container">
-         <form action="http://localhost:8080/api/register" method="post">
+         <form action="http://localhost:8080/register" method="post">
            <!--*http://localhost:8080/register this url for get the router and excute
                the function (register add someone)
                *method Post just to be able to get the infos from <input>
@@ -48,7 +48,7 @@
          </form>
       </div>
       <div class="form-container sign-in-container">
-         <form action="http://localhost:8080/api/login" method="post">
+         <form action="http://localhost:8080/login" method="post">
            <!--*http://localhost:8080/login this url for get the router and excute
                the function (login)
                *method Post just to be able to get the infos from <input>
@@ -73,7 +73,7 @@
             <span>
                <i class="fa fa-eye fa-2x" aria-hidden="true" type="button" id="eye2"></i>
             </span>
-            <a href="#">Forgot your password?</a>
+            <a href="http://localhost:8080/forgot">Forgot your password?</a>
             <button>Sign In <i class="fas fa-sign-in-alt fa-2x"></i></button>
          </form>
       </div>
