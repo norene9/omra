@@ -14,7 +14,6 @@
     <link rel="stylesheet" href="/css/style.css">
     <link rel="stylesheet" href="/css/mobile-style.css">
     <link rel="stylesheet" href="/css/currency.css">
-    <link rel="stylesheet" href="/css/gps_api.css">
     <link href="https://fonts.googleapis.com/css2?family=Almarai:wght@300&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Almarai&family=Cairo&display=swap" rel="stylesheet">
     <link
@@ -31,12 +30,15 @@
       <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/2.0.2/anime.min.js"></script>
       <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
       <!-- manasik_omra-->
-      <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
       <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-      <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css"
-                integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
-      <!-- manasik_hadj-->
+      <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+
+    <!-- manasik_hadj-->
          <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet">
+      <!-- Weather Api -->
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/weather-icons/2.0.10/css/weather-icons.min.css">
+      <link rel="stylesheet" href="/css/Rimouski.css">
+
 </head>
 
 <body>
@@ -63,7 +65,7 @@
                         </li>
 
                         <li class="nav-item">
-                            <a class="nav-link" href="#">SIGN IN</a>
+                            <a class="nav-link" href="http://localhost:8080/salat">SALAT</a>
                         </li>
                         <li class="nav-item dropdown">
                             <div class="dropdown">
@@ -75,14 +77,12 @@
                                 </div>
                             </div>
                         </li>
-
                         <li class="nav-item">
                             <a class="nav-link" href="#">CONTACT</a>
                         </li>
                         <li class="nav-item">
-                            <span class="signup"><a class="nav-link" href="http://localhost:8080/signup">SIGN UP</a></span>
+                            <span class="signup"><a class="nav-link" href="http://localhost:8080/signup">SIGN IN</a></span>
                         </li>
-
                     </ul>
                 </div>
             </nav>
@@ -95,9 +95,8 @@
                     <p>
 
                     </p>
-                    <button class="btn btn-light px-5 py-2 primary-btn">
-                        Do something
-                    </button>
+
+                    <a class=" btn btn-light px-5 py-2 primary-btn" href="http://localhost:8080/signup">Sign up </a>
                 </div>
                 <div class="col-md-5 col-sm-12  h-25">
                     <img src="/img/manasik10.png" class="rotateimg180//" alt="Hadj" />

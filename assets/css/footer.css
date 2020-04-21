@@ -1,0 +1,104 @@
+ /** footer **/
+
+.multif {
+     color: #008df3;
+}
+
+.footer {
+     background: #fff;
+}
+
+.contf {
+     text-align: center;
+     margin-top: 80px;
+}
+
+.contf h3 {
+     font-family: 'Righteous', cursive;
+     font-size: 30px;
+     line-height: 45px;
+     color: dodgerblue;
+     font-weight: bold;
+     padding-bottom: 30px;
+}
+
+.contf span {
+     color: #fff;
+     font-size: 30px;
+     line-height: 30px;
+     padding: 30px 0px 30px 0px;
+     display: inline-block;
+     font-weight: bold;
+}
+
+.contf p {
+     color: #fff;
+     font-size: 17px;
+     line-height: 30px;
+     padding: 0 130px;
+     padding-bottom: 60px;
+}
+
+ul.social_iconf {
+     text-align: center;
+}
+
+ul.social_iconf li {
+     display: inline-block;
+     margin: 0 3px;
+}
+
+ul.social_iconf li a {
+     background: #fff;
+     box-shadow: #ddd 0px 0px 10px 0px;
+     font-size: 22px;
+     padding-top: 5px;
+     border-radius: 50px;
+     width: 50px;
+     height: 50px;
+     display: inline-block;
+     color: #008df3;
+}
+
+ul.social_iconf li a:hover {
+     background: #23262d;
+}
+
+.copyrightf {
+     padding: 20px 0px;
+     background: #0891f8;
+     margin-top: 50px;
+     position: relative;
+}
+
+.copyrightf::after {
+     content: "";
+     position: absolute;
+     bottom: 61px;
+     background: url(../images/bottom.png);
+     width: 290px;
+     height: 292px;
+     right: 0;
+}
+
+.copyrightf p {
+     color: #fff;
+     font-size: 18px;
+     line-height: 22px;
+     text-align: center;
+}
+
+.copyrightf a {
+     color: #fff;
+}
+
+.copyrightf a:hover {
+     color: #23262d;
+}
+.rowf img{
+      position: relative;
+    top: 365px;
+    left: 903.4PX;
+}
+
+/** end footer **/
