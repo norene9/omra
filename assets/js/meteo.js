@@ -26,7 +26,7 @@ function capitalize(str) {
 //async et await son utilisé pour rendre le code asyncrone
 //ceci pour minimioser le code , revoir la vide epinjlé sous nom meilleur ds crome
 async function main() {
-    //retourner les promesse avc fetch 
+    //retourner les promesse avc fetch
     //retourner l'ip du pc
     const ip = await fetch('http://api.ipify.org?format=json')
         .then(resultat => resultat.json())

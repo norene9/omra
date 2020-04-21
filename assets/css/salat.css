@@ -1,13 +1,13 @@
-html { 
+html {
   margin:0;
   padding:0;
-  background: url("/img/zzzzz.jpg") no-repeat center fixed; 
+  background: url("/img/zzzzz.jpg") no-repeat center fixed;
   -webkit-background-size: cover; /* pour anciens Chrome et Safari */
   background-size: cover; /* version standardisée */
    font-family: "Rimouski";
 }
 
- td  { 
+ td  {
 	background-color: #F4F9FF;height: 40px; width: 600px;
 }
 tr :hover {
@@ -21,15 +21,15 @@ table   {
 	filter:alpha(opacity=70); -moz-opacity:0.7; opacity: 0.7;
 	font-family: "Rimouski";
  background-color: #008B8B;
- border-width: 13px ; 
- 
+ border-width: 13px ;
+
 
 
 }
 .col-3{
   float: left;
   width: 27.33%;
-  margin: 40px 3%; 
+  margin: 40px 3%;
   position: relative;
  margin-top: 17px;
 }
@@ -67,7 +67,7 @@ box-shadow: 5px 40px -10px rgba(0,0,0,0.57);
 transition: all 0.4s ease 0s;
 }
 
- 
+
 .effect-1 ~ .focus-border{
   position: absolute;
   bottom: 0;
@@ -102,10 +102,10 @@ transition: all 0.4s ease 0s;
   transition: 0.3s;
 }
 
-h2 { 
+h2 {
 	text-shadow: black 0.5em 0.2em 0.2em;
      color: #E0FFFF;
-    
+
     font :  georgia, palatino, serif;
     font-style : italic;text-align: center
 }
@@ -116,10 +116,10 @@ h2 {
    font-family: "Rimouski";
    text-align: center;
 }
-p#zone_salat{margin: 40px 3%; 
+p#zone_salat{margin: 40px 3%;
 	font-size: 1.2em ; color: #E0FFFF;
 	text-decoration: underline;
-	
+
 
 }
 
@@ -131,7 +131,7 @@ p#zone_salat{margin: 40px 3%;
 @keyframes slidein {
   from {
     margin-left: 100%;
-    width: 300%; 
+    width: 300%;
   }
 
   to {
@@ -141,18 +141,18 @@ p#zone_salat{margin: 40px 3%;
 }
 
 span#date_heure{
- color: #E0FFFF; 
-margin-top: -87px; 
+ color: #E0FFFF;
+margin-top: -87px;
     float: left;
     font-family: "Rimouski";
- border-width: 13px ; 
+ border-width: 13px ;
  margin-left: 512px;
  margin-top: 4px;
 }
 
-::placeholder { 
+::placeholder {
   color: #E0FFFF;
-  opacity: 1; 
+  opacity: 1;
 }
 input[placeholder="ville"]{
   font: 15px/24px "Lato", Arial, sans-serif;

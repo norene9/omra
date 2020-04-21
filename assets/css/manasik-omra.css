@@ -188,7 +188,7 @@ button.btn:hover {
  .slideshow-container {
   position: relative;
   background: #f1f1f1f1;
-  width: 60%;
+  width: 70%;
   margin: auto;
 }
 
@@ -233,9 +233,10 @@ button.btn:hover {
     text-align: center;
     padding: 20px;
     background: #ddd;
-    width: 60%;
+    width: 70%;
     margin: auto;
     direction: rtl;
+    margin-bottom: 250px;
 }
 
 /* The dots/bullets/indicators */
@@ -384,7 +385,9 @@ h1.title {
   direction: rtl;
   margin: 20px;
   animation: fadeInDown 3s;
-      font-size: 50px;
+  font-size: 50px;
+      margin-top: 74px;
+    margin-bottom: 70px;
 }
 @keyframes fadeInDown {
   from {

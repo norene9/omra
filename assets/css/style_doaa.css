@@ -4,14 +4,14 @@ body {font-family: Verdana, sans-serif; margin:0}
 /* Slideshow container */
 .slideshow-container {
   width: 80%;
-  margin: 15px auto;  
+  margin: 15px auto;
   position: relative;
   background: #f5f5dc59;
   border-radius: 15px;
   height: 600px;
   overflow: auto;
   direction: rtl;
-  
+
 }
 .img_doaa{
     text-align: center;
@@ -39,7 +39,7 @@ body {font-family: Verdana, sans-serif; margin:0}
     padding: 20px;
     background: #ddd;
     width: 80%;
-    margin: auto;  
+    margin: auto;
         margin-top: 50px;
         margin-bottom: 40px;
 }
@@ -59,11 +59,11 @@ body {font-family: Verdana, sans-serif; margin:0}
 }
 .dot1:hover {
    color: dodgerblue;
-    background-color: white; 
+    background-color: white;
 }
 
 .dot {
-   
+
   cursor: pointer;
   height: 15px;
   width: 15px;
@@ -85,7 +85,7 @@ q {font-style: italic;}
 .author {color: cornflowerblue;}
 
 .doaa{
-    
+
     border-right-width: 12px;
     border-right-style: inset;
     border-right-color: dodgerblue;
@@ -99,7 +99,7 @@ q {font-style: italic;}
 .doaa p{
     padding:10px 15px ;
     margin: 0px;
-    
+
 }
 
 @media screen and ( max-width:600px)

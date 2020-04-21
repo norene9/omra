@@ -91,4 +91,3 @@ tempElement.addEventListener("click", function () {
         weather.temperature.unit = "celsius"
     }
 });
-

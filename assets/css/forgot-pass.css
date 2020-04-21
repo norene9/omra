@@ -19,13 +19,13 @@
 	 bottom: 0;
 	 top: 0;
      margin: auto;
-     
+
 }
  [data='checkbox-switch'] {
 	 position: relative;
 	 width: 60px;
      height: 30px;
-  
+
 }
  [data='checkbox-switch'] input[type="checkbox"] {
      opacity: 0;
@@ -56,14 +56,13 @@
 	 border: 2px solid #ccc;
 	 background-color: #fff;
      transition: all 0.3s;
-   
+
 }
  [data='checkbox-switch'] input[type="checkbox"]:checked ~ label {
-	 background: dodgerblue;   
+	 background: dodgerblue;
 }
  [data='checkbox-switch'] input[type="checkbox"]:checked ~ label:after {
 	 left: 30px;
      border-color: dodgerblue;
-    
+
 }
- 
