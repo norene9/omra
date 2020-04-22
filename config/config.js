@@ -26,10 +26,18 @@ mysqlConnection.connect((err)=>{
   *The Name of tables :users,...;
   *specification for the tables:
    -users =>:
-          #idUsers:INT(11) Primary key ,NOT NULL,UNIQUE,AUTO INCREMENT;
-          #UserName:VARCHAR(45) NOT NULL;
-          #UserMail:VARCHAR(45) NOT NULL,UNIQUE;
+          #idUsers     :INT(11) Primary key ,NOT NULL,UNIQUE,AUTO INCREMENT;
+          #UserName    :VARCHAR(45) NOT NULL;
+          #UserMail    :VARCHAR(45) NOT NULL,UNIQUE;
           #UserPassword:VARCHAR(20) NOT NULL,UNIQUE;
+   -message =>:
+          #id       :INT PRIMARY KEY AUTO_INCREMENT;
+          #content  : VARCHAR(255);
+          #createdat: datetime;
+   -reply =>:
+          #idr : INT PRIMARY KEY AUTO_INCREMENT;
+          #cont: VARCHAR(255);
+          #qid : INT;
 */
 
 module.exports= mysqlConnection

@@ -67,9 +67,7 @@
       </div>
     </div>
 
-
-
-    <!----loisir------>
+    <!----------------loisir------------------------------>
     <section class="loisirsection">
       <div id="wrap">
         <p>l</p>
@@ -125,12 +123,9 @@
         </div>
       </section>
     </section>
-    <!------end of loisir-------->
+    <!-----------------------end of loisir---------------------------->
 
-
-
-
-      <!------météo api------------------>
+  <!------------------------météo api------------------------------->
     <section class="meteo">
       <span id="date_heure" alt=""></span>
       <script type="text/javascript">window.onload = date_heure('date_heure');</script>
@@ -184,22 +179,11 @@
       <p id="zone_meteo"></p>
       <br>
     </section>
-    <!--------end of météo api---->
+    <!----------------end of météo api-------------------------->
 
-
-
-
-
-
-    <!---------map api------->
-
-    <!--------end of map api----->
-
-
+    <!--------------------currency convert---------------------->
     <section class="sectiondiv">
-      <!-------currency convert--------->
-      <div class="currency-container">
-
+     <div class="currency-container">
         <div class="containercur">
           <div class="header">
             <h1>Currency Converter</h1>
@@ -211,13 +195,30 @@
           <ul class="add-currency-list"></ul>
         </div>
       </div>
-      <!------currency convert------>
     </section>
+    <!-----------------------currency convert--------------------->
 
+    <!------------------------Last Question----------------------->
+    <section>
+      <div class="card border-primary mb-3" style="max-width:800px;
+      margin: auto;">
+        <div class="card-header">
+         Question
+        </div>
+        <div class="card-body">
+          <% for (comment of comment) {%>
+          <h5 class="card-title"><%= comment.content %></h5>
+          <% }%>
+          <a href="http://localhost:8080/question" class="btn btn-primary">See other questions</a>
+        </div>
+      </div>
+    </section>
+    <!---------------------------------------------------->
+
+    <!-------------------------( GPS )--------------------------------------------------->
     <div class="mapdiv">
       <h2>Pour utiliser notre map</h2>
     </div>
-    <!-------------------------( GPS )--------------------------------------------------->
     <section class="section-3 container-fluid p-0 text-center">
     <div class="row">
       <div class="col-md-12 col-sm-12">
@@ -272,6 +273,7 @@
         </div>
       </div>
     </section>
+
     <!-- ======= Contact Section ======= -->
     <section id="contact" class="contact">
       <div class="container">

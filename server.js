@@ -10,6 +10,9 @@ app.use(bodyParser.urlencoded({ extended: false }))
 app.use(bodyParser.json())
 //this calling api.js which is contain sql commandes
 app.use('/',require('./config/api'))
+app.use('/',require('./question'))
+//this calling question.js which is contain sql comma
+app.use('/question',require('./question'))
 //this for calling the static files .js .css images
 app.use('/', express.static('assets'))
 //--------------------------------------------------------
@@ -42,6 +45,7 @@ app.get('/salat', (request, response) => {
 app.get('/forgot', (request, response) => {
   response.render('Home page/forgot-pass')
 })
+
 
 app.post('/', (request, response) => {
   console.log(request.body);

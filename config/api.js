@@ -15,7 +15,7 @@ router.use(bodyParser.json())
 //you get your SENDGRID_API_KEY when u create new AÏ_KEY in Send Grid
 //you had to add SENDGRID_API_KEY in your variabales environnemet
 
-sgMail.setApiKey('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');
+sgMail.setApiKey(process.env._SENDGRID_API_KEY);
 var msg = {
   to: '',
   from: '',
@@ -41,7 +41,7 @@ router.post('/forgotPSW', (request, response) => {
             console.log(error.response.body)
            // console.log(error.response.body.errors[0].message)
         })
-        response.render('Home page/forgot-pass')
+        response.render('Home page/forgot-pass',{msg:"Check Your Email "})
         response.end()
   }
   else {
@@ -83,5 +83,18 @@ router.post('/login',(req,res,next)=>{
   });
 })
 //-----------------------------------------------------------------------------
+
+//Aficher la derniere question
+router.get('/',(request,response)=>{
+  var sql = "SELECT * FROM message ORDER BY id DESC LIMIT 1";
+  var message=request.body.message;
+  mysqlConnection.query(sql, function(error, results) {
+      if (error) {
+          throw error;
+      }
+
+      response.render('Home page/index',{comment:results})
+
+  });})
 
 module.exports = router;
