@@ -15,7 +15,7 @@ router.use(bodyParser.json())
 //you get your SENDGRID_API_KEY when u create new AÏ_KEY in Send Grid
 //you had to add SENDGRID_API_KEY in your variabales environnemet
 
-sgMail.setApiKey('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');
+sgMail.setApiKey('SENDGID_API_KEY');
 var msg = {
   to: '',
   from: '',
