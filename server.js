@@ -45,7 +45,9 @@ app.get('/salat', (request, response) => {
 app.get('/forgot', (request, response) => {
   response.render('Home page/forgot-pass')
 })
-
+app.get('/loisir', (request, response) => {
+  response.render('Home page/loisir')
+})
 
 app.post('/', (request, response) => {
   console.log(request.body);

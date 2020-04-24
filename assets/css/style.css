@@ -284,7 +284,7 @@ header .container .col-md-7 p {
 .section-3 {
   height: 70vmin;
   margin-top: 15vmin;
-  background: var(--bggradient);
+/*  background: var(--bggradient);*/
 }
 
 .section-3 .col-md-12 > h1 {
@@ -313,6 +313,42 @@ header .container .col-md-7 p {
 }
 
 .section-3 .desktop p {
+  font-size: 2vmin;
+}
+
+/*Section app mobile*/
+.section-dis-mobile {
+  height: 70vmin;
+  margin-top: 15vmin;
+  background: var(--bggradient);*/
+}
+
+.section-dis-mobile .col-md-12 > h1 {
+  padding: 2em 0 0.5em 0;
+  color: whitesmoke;
+  font-size: 6vmin;
+}
+
+.section-dis-mobile .col-md-12 > p {
+  padding: 0 4em;
+  padding-bottom: 2em;
+  color: var(--light-gray);
+  font-size: 3vmin;
+}
+
+.section-dis-mobile .desktop {
+  background: white;
+  display: inline-block;
+  border-radius: 3em;
+  padding: 2vmin 4.5vmin;
+  margin: 1em;
+}
+
+.section-dis-mobile .desktop h3 {
+  font-size: 4vmin;
+}
+
+.section-dis-mobile .desktop p {
   font-size: 2vmin;
 }
 
@@ -1235,3 +1271,6 @@ label{    margin-left: 3px;}
   background: #2eafec;
   transition: background 0.2s ease-in-out;
 }
+ header a{
+   text-decoration: none;
+ }

@@ -1,0 +1,218 @@
+
+/* Start Popular Courses Area for restuarant  */
+
+.popular-course-area .container-fluid {
+  padding-left: 21%;
+  padding-right: 0; 
+}
+
+
+  @media (min-width: 1921px) {
+    .popular-course-area .container-fluid {
+      max-width: 1140px;
+      padding-left: 15px; } 
+    }
+
+
+  @media (max-width: 1665px) {
+    .popular-course-area .container-fluid {
+      max-width: 1140px;
+      padding-left: 15px; } 
+    }
+
+
+  @media (max-width: 1199px) {
+    .popular-course-area .container-fluid {
+      max-width: 960px; }
+     }
+
+
+  @media (max-width: 991px) {
+    .popular-course-area .container-fluid {
+      padding-right: 15px; }
+     }
+
+
+  @media (max-width: 768px) {
+    .popular-course-area .container-fluid {
+      max-width: 720px; } 
+    }
+
+.popular-course-area .section-title {
+  margin-right: 0;
+ }
+
+.popular-course-area .owl-stage {
+  padding-left: 0 !important; 
+}
+
+.popular-course-area .owl-controls {
+  position: absolute;
+  top: -74px;
+  right: 0%;
+}
+
+  @media (max-width: 991px) {
+    .popular-course-area .owl-controls {
+      display: none; } 
+    }
+
+.popular-course-area .owl-nav {
+  display: -ms-flexbox;
+  display: flex;
+ }
+
+  .popular-course-area .owl-nav .owl-prev {
+    padding-right: 20px; 
+  }
+
+  .popular-course-area .owl-nav .owl-prev img,
+  .popular-course-area .owl-nav .owl-next img {
+    opacity: .3;
+    -webkit-transition: all 0.3s ease 0s;
+    -moz-transition: all 0.3s ease 0s;
+    -o-transition: all 0.3s ease 0s;
+    transition: all 0.3s ease 0s; 
+  }
+
+    .popular-course-area .owl-nav .owl-prev img:hover,
+    .popular-course-area .owl-nav .owl-next img:hover {
+      opacity: 1;
+     }
+
+
+.single-popular-course .details {
+  padding: 40px 30px;
+  background: #f9f9fb; 
+}
+
+
+.single-popular-course .thumb {
+  overflow: hidden; 
+}
+  .single-popular-course .thumb img {
+    width: 100%;
+    -webkit-transition: all 0.3s ease 0s;
+    -moz-transition: all 0.3s ease 0s;
+    -o-transition: all 0.3s ease 0s;
+    transition: all 0.3s ease 0s;
+   }
+.single-popular-course .name {
+  text-transform: uppercase;
+  font-size: 15px;
+  font-weight: 500; 
+  margin-bottom: 6px;
+  margin-top: -3px;
+}
+.single-popular-course .value {
+  color: #222222;
+  font-weight: 700; 
+}
+.single-popular-course p {
+  margin-bottom: 0;
+ }
+.single-popular-course h4 {
+  line-height: 27px;
+  -webkit-transition: all 0.3s ease 0s;
+  -moz-transition: all 0.3s ease 0s;
+  -o-transition: all 0.3s ease 0s;
+  transition: all 0.3s ease 0s; 
+text-decoration: none;
+}
+.single-popular-course h4:hover {
+  line-height: 27px;
+  -webkit-transition: all 0.3s ease 0s;
+  -moz-transition: all 0.3s ease 0s;
+  -o-transition: all 0.3s ease 0s;
+  transition: all 0.3s ease 0s; 
+text-decoration: none;
+color: dodgerblue;
+}
+.single-popular-course a {
+  color: #222222;
+ }
+.single-popular-course .bottom .list li {
+  display: inline-block;
+ }
+  .single-popular-course .bottom .list li a {
+    color: #ebb35e;
+    font-size: 14px; 
+  }
+.single-popular-course .bottom p {
+  font-size: 13px;
+  font-weight: 500;
+margin-left: 12px; 
+}
+.single-popular-course:hover {
+  cursor: pointer;
+ }
+  .single-popular-course:hover .thumb img {
+    cursor: pointer;
+    transform: scale(1.05); 
+  }
+
+.single-popular-course:hover h4 {
+    color: dodgerblue;
+  text-decoration: none; 
+}
+
+
+.popular-course-area{
+    margin-top: 90px;
+}
+/* End Popular Courses Area*/
+
+
+.accordions {
+  background-color: #f7f7f7;
+}
+.accordion-head {
+  padding: 20px;
+  font-size: 20px;
+  cursor: pointer;
+  transition: color 200ms ease-in-out;
+  border-bottom: 1px solid #fff;
+}
+@media screen and (min-width: 768px) {
+  .accordion-head {
+    padding: 1rem;
+    font-size: 1.2rem;
+  }
+}
+.accordion-head .icon {
+  float: right;
+  transition: transform 200ms ease-in-out;
+}
+.accordion-head.is-open {
+  color: #0088e8;
+  border-bottom: none;
+}
+.accordion-head.is-open .icon {
+  transform: rotate(45deg);
+}
+.accordion-body {
+  overflow: hidden;
+  height: 0;
+  transition: height 300ms ease-in-out;
+  border-bottom: 1px solid #fff;
+}
+.accordion-body > .content {
+  padding: 20px;
+  padding-top: 0;
+}
+
+.col-lg-12 p {
+  margin-left: 20px;
+}
+
+/*font pour les h */
+
+@import url('https://fonts.googleapis.com/css2?family=Palanquin:wght@100&family=Sintony&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Almarai:wght@300&display=swap');
+
+.col-lg-12 h2{
+      font-size: 3rem;
+}
+.popuar-course-carusel.single-popular-course.details h4:hover{
+  text-decoration: fuchsia;
+}

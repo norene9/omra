@@ -48,7 +48,7 @@ var i;
 
 for (i = 0; i < acc.length; i++) {
     acc[i].onclick = function () {
-
+//"active2"
         this.classList.toggle("active2");
         this.nextElementSibling.classList
             .toggle("show");
@@ -58,7 +58,7 @@ for (i = 0; i < acc.length; i++) {
 
 //--------nav mobil
 function myFunction2() {
-    var x = document.getElementById("div-nav");
+    var x = document.getElementById("div-nav2");
     if (x.style.display === "block") {
         x.style.display = "none";
     } else {

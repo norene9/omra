@@ -36,7 +36,7 @@ router.post('/question',(request,response)=>{
 router.get('/question',(request,response)=>{
   var sql = "SELECT * FROM message ORDER BY id DESC";
   var message = request.body.message;
-  nection.query(sql, function(error, results) {
+  mysqlConnection.query(sql, function(error, results) {
       if (error) {
           throw error;
       }

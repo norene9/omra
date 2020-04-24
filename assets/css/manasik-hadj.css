@@ -4,16 +4,20 @@
 	 font-family: 'Roboto', sans-serif;
 	 font-weight: 300;
 }
-.container{
+.container2{
         margin-top: 78px;
 		margin-top: 600px;
-		    margin-left: 28px;
+			margin-left: 28px;
+
+}
+.btncard1{
+    margin-left: 108px;
 }
  .row {
 	 min-height: 100vh;
 	 margin-left: 25px;
 }
- .card {
+ .card2 {
 	 border: 0;
 	 border-radius: 0px;
 	 -webkit-box-shadow: 0 3px 0px 0 rgba(0, 0, 0, .08);
@@ -24,8 +28,9 @@
      will-change: transform;
 	 height: 500px;
 	 color: #5baeb1;
+	     width: 346px;
 }
- .card:after {
+ .card2:after {
 	 content: '';
 	 position: absolute;
 	 top: 0;
@@ -35,30 +40,30 @@
 	 background-color: #5baeb1;
 	 transition: 0.5s;
 }
- .card:hover {
+ .card2:hover {
 	 transform: scale(1.05);
 	 -webkit-box-shadow: 0 20px 35px 0 rgba(0, 0, 0, .08);
 	 box-shadow: 0 20px 35px 0 rgba(0, 0, 0, .08);
 }
- .card:hover:after {
+ .card2:hover:after {
 	 width: 100%;
 }
- .card .card-header {
+ .card2 .card-header {
 	 background-color: white;
 	 padding-left: 2rem;
 	 border-bottom: 0px;
 }
- .card .card-title {
+ .card2 .card-title {
 	 margin-bottom: 1rem;
 }
- .card .card-block {
+ .card2 .card-block {
      padding-top: 0;
          margin-left: 111px;
              margin-top: 10px;
 }
- .card .list-group-item {
+ .card2 .list-group-item {
 	 border: 0px;
-	 padding: 0.25rem;
+	 padding: 0rem;
 	 color: #808080;
 	 font-weight: 300;
 }
@@ -78,7 +83,7 @@
 	 color: #b3b3b3;
 	 letter-spacing: 0px;
 }
- .btn {
+ .btnm {
 	 text-transform: uppercase;
 	 font-size: 0.75rem;
 	 font-weight: 500;
@@ -87,23 +92,23 @@
 	 padding: 0.75rem 1.25rem;
 	 letter-spacing: 1px;
 }
- .btn-gradient {
+ .btn-gradient2 {
 	 background-color: #f2f2f2;
      transition: background 0.3s ease-in-out;
 
 }
 
- .btn-gradient:hover {
+ .btn-gradient2:hover {
 	 color: white;
 	 background-color: #5baeb1;   /*57e2b2*/
 }
-.card-header h2{
+.card-header2 h2{
  font-family: 'cairo', sans-serif;
     font-size: large;
     text-align: center;
     font-size: 40px;
 }
-.card-text{
+.card-text2{
         width: 77%;
     text-align: center;
     margin-left: 40px;
@@ -115,12 +120,12 @@
     margin-left: 117px;
 }
 
-h4{
+ h4{
     font-family: 'almarai', sans-serif;
     font-size: x-large;
     font-size: 20px;
 }
-h1{
+ h1{
     font-family: 'cairo', sans-serif;
     font-size: large;
     text-align: center;
@@ -134,7 +139,7 @@ h2{
 	font-size: 53px;
 
 }
-p{
+  p{
     font-family: 'cairo', sans-serif;
     font-size: large;
     text-align: center;
@@ -151,7 +156,7 @@ p{
  }
 
  /* pour text changer*/
- .content {
+ .content2 {
 	 position: absolute;
 	 transform: translate(-50%, -50%);
 	 height: 160px;
@@ -342,9 +347,7 @@ p{
 
 /* pour text animation*/
 
- div {
-	 display: inline-block;
-}
+
  .bigger {
 	 margin: 0;
 	 font-size: 100px;
@@ -369,7 +372,8 @@ p{
  .text a {
 	 color: #5baeb1;
 }
- .has-animation {
+
+.has-animation {
 	 position: relative;
 }
  .has-animation p, .has-animation img,  .has-animation h2 {
@@ -458,7 +462,7 @@ p{
  .parent {
 	 width: 681px;
 	 height: 384px;
-	 top: 1500px;
+	 top: 2800px;
 	 bottom: 0;
 	 left: 0;
 	 right: 0;
@@ -645,3 +649,4 @@ p{
 		 margin-left: 1%;
 	}
 }
+ 
