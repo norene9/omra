@@ -35,7 +35,7 @@ router.post('/question',(request,response)=>{
 //AFICHER QUESTION
 router.get('/question',(request,response)=>{
   var sql = "SELECT * FROM message ORDER BY id DESC";
-  var message = request.body.message;
+  var message=request.body.message;
   mysqlConnection.query(sql, function(error, results) {
       if (error) {
           throw error;
@@ -44,6 +44,8 @@ router.get('/question',(request,response)=>{
       response.render('pages/question',{question:results})
 
   });})
+
+
 
         //Delete QUESTION
         router.get('/delete/:id', (req, res) => {
@@ -55,34 +57,6 @@ router.get('/question',(request,response)=>{
 
 });
 });
-
-//AFICHER ANSWERS
-router.get('/answer/:id',(request,response)=>{
-
-  function find(j){
-     var sql = 'SELECT A.*, B.* FROM message A ,reply B WHERE A.id=? ';
-     mysqlConnection.query(sql, [j], function(error, results, fields) {
-        if (error) {response.render('pages/question',()=>{
-
-          console.log('no answer');
-          response.send('There is no Answers for this Question')
-        })}
-
-
-          console.log(results[0]);
-          console.log(results[1]);
-          var i=results.length;
-          console.log(results[2]);
-          var v=[];
-         for(var i=1;i<results.length;i++){v[i]=results[i]}
-         response.render('answer/answer',{question:results[0],answer:v})
-
-
-     })};
-     find(request.params.id);
-
-     })
-
 //ADD REPLY (create table reply(idr INT PRIMARY KEY AUTO_INCREMENT,cont VARCHAR(255),qid INT);)
 router.post('/answer/:id',(request,response)=>{
   let id=request.params.id;
@@ -93,9 +67,33 @@ mysqlConnection.query('INSERT INTO reply SET cont=?, qid=?', [cont,id], (err, re
    }
    response.redirect('back');
 
-
  });
 })
 
+
+ //AFICHER ANSWERS
+router.get('/answer/:id',(request,response)=>{
+
+         let id=request.params.id;
+      var sql = 'SELECT * FROM (SELECT * FROM message right join reply ON message.id=reply.qid UNION SELECT * FROM message left join reply ON message.id=reply.qid) as a where a.id=?';
+
+              mysqlConnection.query(sql, [id], function(error, results, fields) {
+  if (error) {
+      throw error;}
+
+      console.log(results[0]);
+  console.log(results[1]);
+  var i=results.length;
+
+  var v=[];
+  for(var i=0;i<results.length;i++){v[i]=results[i]}
+  if(results.length!==0)
+   response.render('answer/answer',{question:results[0],answer:v})
+
+
+                                                           })
+
+
+                              })
 
 module.exports = router;
