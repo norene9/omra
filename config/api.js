@@ -1,6 +1,7 @@
 //---------------(Dependencies)-------------------
 const express = require('express')
 const bodyParser = require('body-parser')
+const bcrypt = require('bcrypt')
 const sgMail = require('@sendgrid/mail');
 let mysqlConnection= require('./config')
 //------------------------------------------------
@@ -23,18 +24,70 @@ var msg = {
   text: '',
   html: '',
 };
+
+//------------------------------------------------------
+
+///------------------(Routes: SQl Query)-----------------
+
+//Post login data (Add user in DB)
+router.post('/register', async (req,res,next)=>{
+  try{
+    user=req.body
+    //This methodes for generate a random string to our token for forgot password feature
+    let token = Math.random().toString(36).substring(1);
+    //const salt = await bcrypt.genSalt(10)
+    const hashedPassword = await bcrypt.hash(user.password, 10)
+    var sql =" INSERT INTO users (UserName,UserMail,UserPassword,tokenKey) VALUES ( ?,?,?,?)";
+    mysqlConnection.query(sql, [user.name,user.mail,hashedPassword,token],(err,rows,fields)=>{
+      if (!err) {
+        console.log('Succes');
+    }
+      else {
+        console.log(err);
+      }
+    });
+  }catch{
+    res.status(500).send(error.message)
+  }
+
+});
+
+//Post login : to get the users infos
+router.post('/login',async (req,res,next)=>{
+  try {
+    const bcrypt = require('bcrypt')
+    user=req.body
+    var sql ="SELECT UserPassword,tokenKey from users WHERE UserMail = ? ";
+    mysqlConnection.query(sql, [user.mail2],async (err,rows,fields)=>{
+      if (!err) {
+        if ( await bcrypt.compare(user.password2,rows[0].UserPassword) || user.password2 === rows[0].tokenKey)
+         {  res.send(rows);
+            console.log({mail:user.mail2,
+                         psw:user.password2});}
+         }
+      else {
+        console.log(err);
+      }
+      });
+  } catch {
+    res.status(500).send(error.message)
+  }
+
+})
+
+//Forgot a password
 router.post('/forgotPSW', (request, response) => {
   var mail=request.body
-  var sql =" SELECT * from users WHERE UserMail = ?";
+  var sql =" SELECT tokenKey from users WHERE UserMail = ?";
   mysqlConnection.query(sql, [mail.forgot],(err,rows,fields)=>{
     if (!err) {
-        console.log(rows[0].UserPassword);
+        console.log(rows[0].tokenKey);
         sgMail.send(msg={
            to: mail.forgot,
            from: 'i.bellaouedj@esi-sba.dz',
            subject: 'Sending with Twilio SendGrid is Fun',
-           text: 'Hello m Yonko i m glad you read that this is ur password ' + rows[0].UserPassword,
-           html: '<strong>Hello m Yonko i m glad you read that this is ur password :</strong> ' + rows[0].UserPassword,
+           text: 'Hello m Yonko i m glad you read that this is ur password ' + rows[0].tokenKey,
+           html: '<strong>Hello m Yonko i m glad you read that this is ur password :</strong> ' + rows[0].tokenKey,
          }).then(() => {
               console.log('Message sent')
          }).catch((error) => {
@@ -49,39 +102,7 @@ router.post('/forgotPSW', (request, response) => {
   }
 });
 })
-//------------------------------------------------------
 
-///------------------(Routes: SQl Query)-----------------
-
-//Post login data (Add user in DB)
-router.post('/register',(req,res,next)=>{
-  user=req.body
-  var sql =" INSERT INTO users (UserName,UserMail,UserPassword) VALUES ( ?,?,?)";
-  mysqlConnection.query(sql, [user.name,user.mail,user.password],(err,rows,fields)=>{
-    if (!err) {
-      console.log('Succes');
-  }
-    else {
-      console.log(err);
-    }
-  });
-});
-
-//Post login : to get the users infos
-router.post('/login',(req,res,next)=>{
-  user=req.body
-  var sql ="SELECT * from users WHERE UserMail = ? AND UserPassword = ?";
-  mysqlConnection.query(sql, [user.mail2,user.password2],(err,rows,fields)=>{
-    if (!err) {
-      res.send(rows);
-      console.log({mail:user.mail2,
-                   psw:user.password2});
-  }
-    else {
-      console.log(err);
-    }
-  });
-})
 //-----------------------------------------------------------------------------
 
 //Aficher la derniere question
