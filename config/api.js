@@ -57,10 +57,10 @@ router.post('/login',async (req,res,next)=>{
   try {
     const bcrypt = require('bcrypt')
     user=req.body
-    var sql ="SELECT UserPassword,tokenKey from users WHERE UserMail = ? ";
+    var sql ="SELECT * from users WHERE UserMail = ? ";
     mysqlConnection.query(sql, [user.mail2],async (err,rows,fields)=>{
       if (!err) {
-        if ( await bcrypt.compare(user.password2,rows[0].UserPassword) || user.password2 === rows[0].tokenKey)
+        if ( (await bcrypt.compare(user.password2,rows[0].UserPassword)) || (user.password2 === rows[0].tokenKey) )
          {  res.send(rows);
             console.log({mail:user.mail2,
                          psw:user.password2});}
@@ -76,18 +76,19 @@ router.post('/login',async (req,res,next)=>{
 })
 
 //Forgot a password
-router.post('/forgotPSW', (request, response) => {
+router.post('/forgotPSW', async(request, response) => {
   var mail=request.body
-  var sql =" SELECT tokenKey from users WHERE UserMail = ?";
-  mysqlConnection.query(sql, [mail.forgot],(err,rows,fields)=>{
+  var sql =" SELECT * from users WHERE UserMail = ?";
+  mysqlConnection.query(sql, [mail.forgot],async(err,rows,fields)=>{
     if (!err) {
+
         console.log(rows[0].tokenKey);
         sgMail.send(msg={
            to: mail.forgot,
            from: 'i.bellaouedj@esi-sba.dz',
            subject: 'Sending with Twilio SendGrid is Fun',
-           text: 'Hello m Yonko i m glad you read that this is ur password ' + rows[0].tokenKey,
-           html: '<strong>Hello m Yonko i m glad you read that this is ur password :</strong> ' + rows[0].tokenKey,
+           text: 'Hello m Yonko i m glad you read that this is ur Token : \n ' + rows[0].tokenKey,
+           html: '<strong>Hello m Yonko i m glad you read that this is ur Token :</strong>  \n ' + rows[0].tokenKey,
          }).then(() => {
               console.log('Message sent')
          }).catch((error) => {

@@ -53,3 +53,58 @@ anime.timeline({ loop: true })
         delay: 1000
     });
 //--------------------
+//---------------(Translate)-------------------
+var dataReload = document.querySelectorAll("[data-reload]")
+
+var lan = {
+  ar : {
+    titre1:"الإستعداد للرحلة",
+    pres_1:".لنستعد لهذه الرحلة لابد من تجهيز النفس قبل تجهيز الحقيبة .. وهناك عبادات قلبية وعبادات بدني نفعلها قبل  الحج استعداداً له",
+    pres_2:":عبادات قلبية ",
+    pres_3:":هذه خمس عبادات قلبية لابد لك منها حتى تجني ثمار رحلتك وتحصد غراس تعبك",
+    pres_4:"..أولا : افهم -",
+    pres_5:"ويد إسماعيل عند بنائه, ثم يد محمد - صلى الله عليه وسلم - عند وضعه الحجر الأسود,ومن الفهم أن تفهم أن الله قد اختارك من وسط مئات الملايين لتنال شرف الزيارة وتشهد كرامة اللقاء، فكم من كافر على وجه الأرض حرم نعمة الإسلام؟ وكم من عظيم ورئيس أغلق دونه الباب؟ لقد اختارك الله دون الكثيرين واختصك بالفضل عن غيرك من المسلمين، بل ذلل لك كل العقبات، فلم يمنعك ضعف صحة أو قلة مال أو كثرة عيال، فما أعظم كرامتك على الله وما أغلى مكانتك عنده.",
+    pres_6:"- ثانيا : التوبة ..",
+    pres_7:"أخي الحاج إياك أن تبني صرح حجك على شفا جرف هار، فتحج وأنت تنوي أن تعود إلى المعصية، وإلا فكيف تف بيت      الله،        وتدعوه  أن يغفر لك ويرحمك وقد عقدت العزم على محاربته بعد عودتك؟!     من أراد أن يدق باب الحرم بيده غدا فليطرق باب التوبة بقلبه اليوم، فالذنوب عوائق عن الوصول، بل حتى وإن وصلت        البيت        فالمعاصي موانع تحول بينك وبين القبول.",
+    pres_8:"- ثالثا : الشوق ..",
+    pres_9:"",
+    pres_10:": رابعا : العزم",
+    pres_11:"ومن العزم مفارقة راحتك ورفاهية التي كنت تجدها في بيتك طلبا لثواب الله. ومن العزم أن تجعل عملك خالضا لوجه  الله،        فلا تحج طلبا للسمعة أو الشهرة، أو سعيا للمنفعة والتجارة. و يحل لك في الحج أن تتاجر على أن لا يكون ذلك    مقصدك    في    الأساس، وبهذا يكون سفر الحج خير الأسفار على الإطلاق.        ولذا حين رأي عمر بن الخطاب - رضي الله عنه - نفرا من الحجاج يوما وهو بطريق مكة فقال :        تشعثون وتغبرون وتتلون وتضحون، لا تريدون بذلك شيئا من عرض الدنيا، ما نعلم سفرا خيرا من هذا.",
+    pres_12:"خامسا : قطع العلائق-",
+    pres_13:">فمعناه أن لا يلتفت قلبك إلى غير الله، فلا تعود تذكر أهلك ومالك وعملك، بل لا يملأ قلبك طوال رحلتك سوى هم        جليل        يتزلزل بسببه كيانك وتضطرب أوصالك... أن يغفر لك الله لك فيقلب صحيفة ذنوبك بيضاء نقية .. أن يصطفيك من        عبادهِ        في        يمتعك بالنظر إلى وجهه الكريم . . أن يؤويك إلى جوار نبيه ويجعلك من جلسائه المقربين .. وغير ذلك من عظائم        الآمال        وجلائل الأمنيات، فحدد غايتك من حجتك، و وحدد هدفك من الآن حتی تصل إليه سريعا"
+  },
+  fr : {
+    titre1:"",
+    pres_1:"Avant de se préparer pour le voyage , il faut être prêt mentalement et physiquement..d'ailleurs voici quelques adorations à réaliser avant le Hadj.",
+    pres_2:"",
+    pres_3:"Voici 5 adorations  nécessaires pour avoir un pèlerinage réussi:",
+    pres_4:"1- Premièrement: Comprendre ...",
+    pres_5:"Faut bien savoir et comprendre la dimension spirituelle de ce voyage qui vous conduira sur les Terres ou se trouve Mekka la maison qu\'Allah a attribué à lui même en disant {}, de plus cette mosquée sacrée a été construit par Ibrahim et Ismail , et puis le prophète Mohammed (Salla Allahou Aleyhim wa Sallam) qui a complété sa construction en mettant   'Al Hadjar al assewad'.\n\n A propos de ce lieu sacré , Chikh Al Charaoui a parlé de sa valeur en disant : 'Si toutes les mosquées choisies et réalisées par l\'Homme nous permet de nous réunir pour renconter dieu ,alors que sera la valeur et la dimension d\'un lieu choisi par le bon dieu?.\n Et de sa bénédiction (Sobhanaho Wa Taala), chaque prière est équivalente a cent prières, une Hassana est équivalente a cent milles Hassana, alors que dans d\'autres mosquées dix Hassanat, et de sa bénédiction que nous nous éloingons des péchés et des transgressions , et de sa bénédiction que ce lieu sacré est tellement vaste qui porte les foules des gens portant le surpeuplement et la congestion.\n Et comme mentionné dans le Couran {...Fait donc que se penchent vers eux les coeurs d'une partie des gens...}Ibrahim-37- , le Hadj n'est pas un simple voyage physique, mais ce sont des esprits poussés  vers leur Dieu sans ressentir .\n\nPour cela  faut comprendre que dieu vous a choisi et honoré parmis des milliers de gens pour visiter ce lieu , combien de non-croyant n\'as pas eu la chance d\'être mosulman? dieu t\'as choisi parmis tous ces mosulmans et t\'as acceuilé dans sa maison en pleinne santé et sans avoir des problémes finnanciers , tu doit être reconnaisant! ",
+    pres_6:"2- Deuxièmement:Le Repentir",
+    pres_7:"Cher Hajj, méfiez-vous que vous avez l\'intention de retourner aux péchés après ce pèlerinage,sinon comment attendiez vous que Dieu vous pardonne  vous les pardonne! Celui qui veux frapper la porte de la maison d\'Allah, qu\'il frappe d\'abord la porte de la contrition avec son coeur aujourd\'hui, car les péchés empêche d\'avoir un pèlerinage réussi,Le Chikh Al Hantaoui donna un bon exemple en disant 'Un avion surchargé du fer et attaché avec des cordes d\'acier aux rochers des montagnes  ne peut jamais décoler sauf en rédisant la surcharge, c\'est pareils pour nos faits, si on veut que notre Hajj soit accepté par le bon Dieu , on doit nous éloigner des désirs et des péchés' \n\n Le meilleur but d'un mosulmant est de repentir , comme montionné dans le Coran {Allah a accueilli le repentir du prophète, celui des Emigrés et des Auxiliaires qui l\'ont suivit à un moment difficile, après que les coeurs d\'un groupe d\'entre  eux étaient sur le point de dévier.Puis il  accueillit leur repentir car il est Compatissant et Miséricordieux à leur égard} -Al Tawba 117-Ibn Al Kaiem a dit :'Pour savoir la valeur de la contrition chez Allah et son importance pour un mosulman,Dieu à donné cette honneur après la dernière Invasion après avoir fait tout ce qu'ils ont dans le but de repentir , pour cela le meilleur jour du prophète depuis sa naissance était le jour du repentir de Kaab Bnou Malik'",
+    pres_8:"3- troisièmement:Le désir",
+    pres_9:"Vous pouvez l\'atteindre quand vous réalisez que vous mettez vos pieds sur le Terre du prophète(Saala Allah alayhi wassalam) , Peut être vous allez pleurer en craignant Dieu , et vos larmes circulerons sur la même terre arrosée par les larmes du prophète et de es Compagnons, vos respirez le même air qu\'ils ont réspiré, ceci te fait penser absolument aux Honorables prophètes.\n\nIci à Mekka , ou le prophète a grandi, Saalem Bnou Abd Allah a laisser son bagage à 'Ouad Atik' ou le prophète a passé nuit lors de son pèlerinage , et il disait que al Attik est un fleuve sacré.\nLe désir est de savoir que cette visite est pour Dieu non sa maison à propre thérme, et aussi d\'être pardoné pour toutes nos erreurs, pour cela , on trouve dans le hadit que Allah dit :'Si un serviteur est en bonne santé , et je lui ai étendu la vie ,il y passe cinq ans et ne me profite de me rendre visite ce n'est qu\'il est démunis' -1909 Sahih Al Djamee- , on annalisant on voit que le Dieu n\'a pas nommécette place par ' Ma maison' ce qui prouve que le Hajj n\'est qu\'un voyage spirituel vers Allah.\n Mais si tu lui(Sobhanahou wa Taala) rend visite dans sa maison , tu le verras pas, mais dit toi que serra ta réaction le jour ou tu vas voir le Dieu qui t\'as donné une chance merveilleuse de visiter le plus sacré des lieux de l\'Islam.\n\n Le prophète Mohammed a dit:'Quand les Bienheureux du Paradis y entrent,Dieu, Béni soit-il et Exalté,leur dit :'Désirez -vous que Je vous donne quelque chose de plus?'Ils répondent :'Ne nous as-Tu pas illuminé les visages?Ne nous as-Tu pas fait entrer au Paradis et sauvé de l\'enfert?' Sur ce, Il ôte le voile et rien de ce dont ils sont gratifiés ne leur est désormais plus cher que le regard à leur Seigneur(à Lui la puissance et la majesté)' -523 Sahih Al Djamee-.\n\n Le désir est quand les gens aspirent à la maison de Dieu lors de sa séparation , et il ne sont jamais satisfait de y quitter , comme un Aimant qui attire le fer, car celui qui goûtait le plaisir de la proximité du Dieu le savait, Dieu Tout-Puissant a dit : 'Et quand Nous fîmes de la Maison(la Kaâba) un lieu de rassemblement pour les gens et un asile de paix...' -125 Al Baqarah- , ce que veux dire que les gens  refugent dans ce lieu sacré a tout fois qu\'il leur manque. Et parmis les personne connu par leurs désir à la maison d\'Allah , Sofiane Ibn Aîna qui a dit qu\'il était à 'Arafa, et tellement qu\'il avait hâte à ces moments il priait Dieu a tout moment que ça soit pas sa dérnière fois, le Bon Dieu lui ne lui est pas démunis ce qu'il voulait,quand c\'était l\'ans de mort sa il n\'a rien dit , on lui a demandait pourquoi il disait qu\'il avait honte de Allah.*********** Le Imam Ahmed Ibnou  Hanbel tellement à son fort désir de visiter la maison d'Allah et qu\'il n\'avait pas l\'argent suffisant pour y aller, il travallait comme transporteur de marchandises pour couvrire ses tarifs et ne pas être démunis.",
+    pres_10:"4- Quatrièmement:la volenté",
+    pres_11:"La volenté est de quitter la maison et la vie quotidienne pour chercher de la récompense de Dieu, et que votre travail soit pur pour Dieu et qu\'on attend pas  la réputation ni des avantages commerciaux,  ainsi que les petites achanges sont autorisé tant-que ça devient pas votre destination principale.",
+    pres_12:"5:ceinquièmement:Faire le Hajj pour Dieu",
+    pres_13:"Le musulman doit également détourner ses pensées du monde terrestre, et pour cela il ne doit plus avoir aucune affaire d\’importance en cours au moment d’effectuer le Hajj,car le point essentiel de cette préparation spirituelle au Hajj concerne l\’âme du croyant, qui se doit d\’être totalement tournée vers Dieu pour l\’accomplissement de ce pilier clé de l\’islam. Le musulman doit donc se purifier de toutes pensées revêtant un quelconque aspect d\’association, qu\’il soit majeur ou mineur. Il s\’agit ici d\’une condition primordiale à l\’acceptation du pèlerinage par Dieu "
+
+  }
+};
+ if(window.location.hash){
+    if (window.location.hash === "#fr"){
+pres_1.textContent = lan.fr.pres_1;
+pres_2.textContent = lan.fr.pres_2;
+pres_3.textContent = lan.fr.pres_3;
+pres_4.textContent = lan.fr.pres_4;
+pres_5.textContent = lan.fr.pres_5;
+pres_6.textContent = lan.fr.pres_6;
+pres_7.textContent = lan.fr.pres_7;
+pres_8.textContent = lan.fr.pres_8;
+pres_9.textContent = lan.fr.pres_9;
+pres_10.textContent = lan.fr.pres_10;
+pres_11.textContent = lan.fr.pres_11;
+pres_12.textContent = lan.fr.pres_12;
+pres_13.textContent = lan.fr.pres_13;
+   }
+  }

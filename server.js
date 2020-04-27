@@ -1,9 +1,13 @@
 //---------------Dependencies-----------------
 let express = require('express')
 let bodyParser = require('body-parser')
+let livereload = require('livereload')
+let connectLivereload = require('connect-livereload')
 //--------------------------------------------
 
 let app = express()
+var liveReloadServer = livereload.createServer()
+liveReloadServer.watch([__dirname +'./assets',__dirname +'./views/Home page'])
 
 //--------------------(middelware)-----------------------
 app.use(bodyParser.urlencoded({ extended: false }))
@@ -14,7 +18,9 @@ app.use('/',require('./question'))
 //this calling question.js which is contain sql comma
 app.use('/question',require('./question'))
 //this for calling the static files .js .css images
-app.use('/', express.static('assets'))
+app.use( express.static("./assets"))
+//Reload the pages
+app.use(connectLivereload())
 //--------------------------------------------------------
 
 //moteur de view
