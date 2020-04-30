@@ -65,7 +65,7 @@ button.accordion {
   padding: 18px;
   width: 100%;
   border: none;
-  text-align: right;
+  /* text-align: right; */
   outline: none;
   font-size: 25px;
   transition: 0.4s;
@@ -111,27 +111,27 @@ div.panel {
   transition: 0.6s ease-in-out;
   opacity: 0;
   max-height: 0;
-  direction: rtl;
+  /* direction: rtl; */
 
 }
 
 .panel p{
-  text-align: right;
-  direction: rtl;
+  /* text-align:right; */
+  /* direction: rtl; */
   font-size: 20px;
   font-family: 'Almarai',sans-serif;
 }
 
 .panel h5{
   font-size: 20px;
-  direction: rtl;
-  text-align: right;
+  /* direction: rtl; */
+  /* text-align: right; */
 }
 
 .panel li{
   font-size: 20px;
-  text-align: right;
-  direction: rtl;
+  /* text-align: right; */
+  /* direction: rtl; */
 }
 
 div.panel.show {
