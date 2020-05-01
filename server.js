@@ -34,7 +34,7 @@ app.get('/avant_voyage', (request, response) => {
   response.render('Home page/avant_voyage')
 })
 app.get('/signup', (request, response) => {
-  response.render('Home page/signup')
+  response.render('UserPages/signup')
 })
 app.get('/manasik_omra', (request, response) => {
   response.render('Home page/manasik_omra')
@@ -48,12 +48,10 @@ app.get('/ad3iya', (request, response) => {
 app.get('/salat', (request, response) => {
   response.render('Home page/salat')
 })
-app.get('/forgot', (request, response) => {
-  response.render('Home page/forgot-pass')
-})
 app.get('/loisir', (request, response) => {
   response.render('Home page/loisir')
 })
+
 
 app.post('/', (request, response) => {
   console.log(request.body);
