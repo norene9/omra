@@ -6,6 +6,10 @@
 header,
 section {
   overflow-x: hidden;
+
+}
+.row2{
+      margin-top: 77px;
 }
 
 :root {
@@ -284,7 +288,7 @@ header .container .col-md-7 p {
 .section-3 {
   height: 70vmin;
   margin-top: 15vmin;
-/*  background: var(--bggradient);*/
+  background: var(--bggradient);
 }
 
 .section-3 .col-md-12 > h1 {
@@ -316,42 +320,6 @@ header .container .col-md-7 p {
   font-size: 2vmin;
 }
 
-/*Section app mobile*/
-.section-dis-mobile {
-  height: 70vmin;
-  margin-top: 15vmin;
-  background: var(--bggradient);*/
-}
-
-.section-dis-mobile .col-md-12 > h1 {
-  padding: 2em 0 0.5em 0;
-  color: whitesmoke;
-  font-size: 6vmin;
-}
-
-.section-dis-mobile .col-md-12 > p {
-  padding: 0 4em;
-  padding-bottom: 2em;
-  color: var(--light-gray);
-  font-size: 3vmin;
-}
-
-.section-dis-mobile .desktop {
-  background: white;
-  display: inline-block;
-  border-radius: 3em;
-  padding: 2vmin 4.5vmin;
-  margin: 1em;
-}
-
-.section-dis-mobile .desktop h3 {
-  font-size: 4vmin;
-}
-
-.section-dis-mobile .desktop p {
-  font-size: 2vmin;
-}
-
 /* Section Team */
 
 .section-4  {
@@ -376,6 +344,7 @@ footer .column i + i {
 }
 
 .sticky {
+
   position: fixed;
   top: 0;
   width: 100%;
@@ -991,10 +960,12 @@ box-shadow: 0px 0px 15px rgba(56,56,56,.2);
   -webkit-transition:.5s;
   transition:.5s;
   margin-top: 8px;
+  border: 1px solid;
 }
 .mybtn i{
   font-weight: 700;
   margin-right: 5px;
+  color: #fff;
 }
 .mybtn:focus{
   outline:none;
@@ -1245,32 +1216,22 @@ label{    margin-left: 3px;}
   }
 }
 
-.back-to-top {
-  position: fixed;
-  display: none;
-  width: 40px;
-  height: 40px;
-  border-radius: 50px;
-  right: 15px;
-  bottom: 15px;
-  background: #149ddd;
-  color: #fff;
-  transition: display 0.5s ease-in-out;
-  z-index: 99999;
-}
-
-.back-to-top i {
-  font-size: 24px;
-  position: absolute;
-  top: 7px;
-  left: 8px;
-}
-
-.back-to-top:hover {
-  color: #fff;
-  background: #2eafec;
-  transition: background 0.2s ease-in-out;
-}
  header a{
    text-decoration: none;
+   color: #fff;
  }
+
+ /* It is Adjacent sibling combinator */
+
+footer .column i + i {
+  padding: 0 0.5em;
+}
+
+.sticky {
+  position: fixed;
+  top: 0;
+  background:dodgerblue;
+  z-index: 9999;
+  transition: all 1.5s ease;
+  opacity: 0.8;
+}
