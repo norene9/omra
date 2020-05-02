@@ -3,41 +3,14 @@ const express = require('express')
 const bodyParser = require('body-parser')
 const bcrypt = require('bcrypt')
 const sgMail = require('@sendgrid/mail');
-const session = require('express-session')
 let mysqlConnection= require('./config')
 //------------------------------------------------
 
 //----------middelware
-let router = express();
+let router = express.Router();
 router.use(bodyParser.urlencoded({ extended: false }))
 router.use(bodyParser.json())
-router.use(session({
-  name: 'sid',
-  resave: false,
-  saveUninitialized: false,
-  secret: 'is a secret',
-  cookie:{
-    maxAge: 1000 * 60 * 60 * 2,
-    sameSite: true,
-    secure: false
-  }
-}))
-//
-// const redirectLogin =(req,res,next)=>{
-//   if (!req.session.userId){
-//     res.redirect('/signup')
-//   }else {
-//     next()
-//   }
-// }
-//
-// const redirectHome =(req,res,next)=>{
-//   if (req.session.userId){
-//     res.redirect('/user')
-//   }else {
-//     next()
-//   }
-// }
+
 
 //-------------(Send mail:forgot password)-------------
 //you get your SENDGRID_API_KEY when u create new AÏ_KEY in Send Grid
@@ -51,10 +24,6 @@ var msg = {
   text: '',
   html: '',
 };
-
-//------------------------------------------------------
-
-//---------------------(Routes)-------------------------
 
 //------------------------------------------------------
 
@@ -77,16 +46,6 @@ router.post('/register', async (req,res,next)=>{
         console.log(err);
       }
     });
-    var sql ="SELECT * from users WHERE UserMail = ? ";
-    mysqlConnection.query(sql, [user.mail],async (err,rows,fields)=>{
-      if (!err) {
-          req.session.userId = rows[0].idUsers
-          res.redirect('/user')
-         }
-      else {
-        console.log(err);
-
-      }});
   }catch{
     res.status(500).send(error.message)
   }
@@ -102,8 +61,7 @@ router.post('/login',async (req,res,next)=>{
     mysqlConnection.query(sql, [user.mail2],async (err,rows,fields)=>{
       if (!err) {
         if ( (await bcrypt.compare(user.password2,rows[0].UserPassword)) || (user.password2 === rows[0].tokenKey) )
-         {  req.session.userId = rows[0].idUsers
-            res.redirect('/user')
+         {  res.send(rows);
             console.log({mail:user.mail2,
                          psw:user.password2});}
          }
