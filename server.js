@@ -57,6 +57,40 @@ app.get('/loisir', (request, response) => {
 app.get('/loisir2', (request, response) => {
   response.render('Home page/loisir2')
 })
+//------------------------------------------------------------------------------
+
+//-------------------(Routes For Users)-----------------------------------------
+app.get('/user',(request, response)=>{
+  response.render('UserPages/index')
+})
+app.get('/user/avant_voyage', (request, response) => {
+  response.render('UserPages/avant_voyage')
+})
+app.get('/user/signup', (request, response) => {
+  response.render('UserPages/signup')
+})
+app.get('/user/manasik_omra', (request, response) => {
+  response.render('UserPages/manasik_omra')
+})
+app.get('/user/manasik_hadj', (request, response) => {
+  response.render('UserPages/manasik-hadj')
+})
+app.get('/user/ad3iya', (request, response) => {
+  response.render('UserPages/ad3iya')
+})
+app.get('/user/salat', (request, response) => {
+  response.render('UserPages/salat')
+})
+app.get('/user/forgot', (request, response) => {
+  response.render('UserPages/forgot-pass')
+})
+app.get('/user/loisir', (request, response) => {
+  response.render('UserPages/loisir')
+})
+app.get('/user/loisir2', (request, response) => {
+  response.render('UserPages/loisir2')
+})
+//------------------------------------------------------------------------------
 
 app.post('/', (request, response) => {
   console.log(request.body);

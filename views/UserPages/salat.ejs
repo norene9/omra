@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <h1>" إِنَّ الصَّلاَةَ كَانَتْ عَلَى الْمُؤْمِنِينَ كِتَاباً مَّوْقُوتاً" </h1>
+    <title>Mawaqit Salat </title>
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="/js/salat.js"></script>
+
+    <link rel="stylesheet" href="/css/salat.css">
+    <script type="text/javascript" src="/js/date-heure.js"></script>
+</head>
+
+<body>
+    <span id="date_heure" alt=""></span>
+    <script type="text/javascript">window.onload = date_heure('date_heure');</script>
+
+    <br><br>
+    <br><br>
+    <p id="zone_salat">Veillez saisir le nom de la ville suivi du pays </p>
+    <div class="col-3 input-effect">
+        <input class="effect-1" id="queryLoc" type="text" placeholder="ville">
+        <input class="effect-1" id="queryLoc1" type="text" placeholder="pays">
+        <br><br><br>
+        <button class="mybtn" onclick="buttonClickGET()">mawaqit</button>
+        <br><br>
+
+    </div>
+    <br><br><br>
+    <div class="container">
+        <div class="text"></div>
+    </div>
+    <br><br><br><br>
+    <p id="pp"> </p>
+</body>
+
+</html>
