@@ -54,6 +54,9 @@ app.get('/forgot', (request, response) => {
 app.get('/loisir', (request, response) => {
   response.render('Home page/loisir')
 })
+app.get('/loisir2', (request, response) => {
+  response.render('Home page/loisir2')
+})
 
 app.post('/', (request, response) => {
   console.log(request.body);
