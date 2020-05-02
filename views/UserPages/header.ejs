@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Hadj & Omra guid</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous" />
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css"
+        integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+    <link rel="stylesheet" href="/css/style.css" />
+    <!-- <link rel="stylesheet" href="/css/avant_voyage.css" /> -->
+    <link rel="stylesheet" href="/css/mobile-style.css">
+    <link rel="stylesheet" href="/css/currency.css">
+    <link rel="stylesheet" href="/css/meteo.css">
+    <link href="https://fonts.googleapis.com/css2?family=Almarai:wght@300&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Almarai&family=Cairo&display=swap" rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Raleway:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i"
+        rel="stylesheet" />
+    <link href='https://fonts.googleapis.com/css?family=Lato:300,400,700,900' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" href="http://fontawesome.io/assets/font-awesome/css/font-awesome.css">
+    <!-- Google Fonts -->
+    <link
+        href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Raleway:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i"
+        rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Baloo+Chettan+2:wght@500&display=swap" rel="stylesheet">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/2.0.2/anime.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/weather-icons/2.0.10/css/weather-icons.min.css">
+    <link rel="stylesheet" href="/css/Rimouski.css">
+    <link rel="stylesheet" href="/css/met.css">
+    <link rel="stylesheet" href="/css/map.css">
+    <script src="/js/main.js"></script>
+    <!-----------------------  Script For GPS ------------------------------------>
+    <script
+        src='http://www.bing.com/api/maps/mapcontrol?callback=GetMap&key=An-DQwMckibyuZ0q93OLo5kSNITR6VevW6-zy4NGjlLPGxMLljye2k7SZHXRF1oU'
+        async defer></script>
+</head>
+
+<body>
+
+    <!-- header-start -->
+    <header>
+        <div class="container-fluid p-0 ">
+            <nav class="navbar navbar-expand-lg sticky">
+                <a class="navbar-brand" href="http://localhost:8080">
+                    <i class="fab fa-glide-g fa-2x"></i>uid for hadj & omra</i></a>
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
+                    aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <i class="fas fa-align-right text-light"></i>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <div class="mr-auto"></div>
+                    <ul class="navbar-nav">
+                        <li class="nav-item active">
+                            <a class="nav-link" href="http://localhost:8080">HOME
+                                <span class="sr-only">(current)</span>
+                            </a>
+                        </li>
+
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">SIGN IN</a>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <div class="dropdown">
+                                <a href="#" class="nav-link">MANASIK</a>
+                                <div class="dropdown-content">
+                                    <a href="http://localhost:8080/manasik_hadj">MANASIK EL HADJ </a>
+                                    <a href="http://localhost:8080/manasik_omra">MANASIK EL OMRA</a>
+                                    <a href="http://localhost:8080/ad3iya">ADIYA</a>
+                                </div>
+                            </div>
+
+                            <li class="nav-item dropdown">
+                                <div class="dropdown">
+                                    <a href="#" class="nav-link">LOISIR</a>
+                                    <div class="dropdown-content">
+                                        <a href="http://localhost:8080/loisir">LOISIR</a>
+                                        <a href="http://localhost:8080/loisir2">LOISIR2</a>
+                                    </div>
+                                </div>
+                            </li>
+
+                        </li>
+
+                        <li class="nav-item">
+                            <a class="nav-link" href="#contact">CONTACT</a>
+                        </li>
+                    </ul>
+                </div>
+            </nav>
+        </div>
+        <div class="container text-center">
+            <div class="row row2">
+                <div class="col-md-7 col-sm-12  text-white">
+                    <h6>Your guid for </h6>
+                    <h1>Hadj & Omra</h1>
+                    <button class="px-5 py-2 mybtn"><i class="fas fa-user-plus"></i> <a
+                            href="http://localhost:8080/signup">SIGN
+                            UP</a>
+                    </button>
+                </div>
+                <div class="col-md-5 col-sm-12  h-25">
+                    <img src="/img/manasik10.png" class="rotateimg180//" alt="Hadj" />
+                </div>
+            </div>
+        </div>
+
+    </header>
+    <!-- header-end -->
+
+    <script src="/js/main.js"></script>
