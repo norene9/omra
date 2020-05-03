@@ -22,7 +22,7 @@ router.use(session({
     secure: false
   }
 }))
-//
+
 // const redirectLogin =(req,res,next)=>{
 //   if (!req.session.userId){
 //     res.redirect('/signup')
@@ -30,7 +30,7 @@ router.use(session({
 //     next()
 //   }
 // }
-//
+
 // const redirectHome =(req,res,next)=>{
 //   if (req.session.userId){
 //     res.redirect('/user')
@@ -112,9 +112,19 @@ router.post('/login',async (req,res,next)=>{
   } catch {
     res.status(500).send(error.message)
   }
-
 })
-
+//-----------------------------------------------------------------------------
+//     Logout
+router.post('/logout',(req , res)=>{
+  req.session.destroy(err=>{
+    if(err){
+      return   res.render('Home page/index');
+    }
+    res.clearCookie('sid')
+    res.render('Home page/signup')
+  })
+})
+// -----------------------------------------------------------------------------
 //Forgot a password
 router.post('/forgotPSW', async(request, response) => {
   var mail=request.body
@@ -158,6 +168,7 @@ router.get('/',(request,response)=>{
       response.render('Home page/index',{comment:results})
 
   });})
+//------------Afficher la derniere question User session------------------------
   router.get('/user',(request,response)=>{
     var sql = "SELECT * FROM message ORDER BY id DESC LIMIT 1";
     var message=request.body.message;
@@ -169,5 +180,6 @@ router.get('/',(request,response)=>{
         response.render('UserPages/index',{comment:results})
 
     });})
-
+// -------------------------------------------------------------------------------
 module.exports = router;
+// module.exports =  redirectHome
