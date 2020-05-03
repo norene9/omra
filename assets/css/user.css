@@ -1,0 +1,204 @@
+ .btn {
+    color: #fff;
+    background-color: #4e73df;
+    border-color: #4e73df;
+}
+.btn-primary {
+    color: #fff;
+    background-color: #4e73df;
+    border-color: #4e73df;
+}
+.nav-item{
+        margin-right: 125px;
+}
+.meteo{
+    margin-left: 540px;
+
+}
+.rowf img {
+    position: relative;
+    top: 365px;
+    left: 887.4PX;
+}
+
+.meteo {
+    margin-left: 371px;
+    margin-top: 53px;
+}
+.link1{
+        margin-right: -160px;
+}
+.drop{
+    margin-right: 44px;
+}
+a:hover{
+    text-decoration: none;
+}
+a{
+    color: #4e73df;
+      font-family: 'almarai', sans-serif;
+     
+}
+.dropdown-content a {
+    color: black;
+    padding: 5px 18px;
+    text-decoration: none;
+    display: block;
+    font-size: 15px;
+}
+.section-4 {
+    margin-top: 241px;
+}
+.weather-icon img {
+    display: block;
+    margin: 0px auto;
+    width: 147px;
+    margin-left: 95px;
+}
+.temperature-value p {
+    padding: 0;
+    margin: 0;
+    color: #293251;
+    font-size: 4em;
+    text-align: center;
+    cursor: pointer;
+    margin-left: 23px;
+}
+
+
+.fa-2x {
+    font-size: 3em;
+}
+.guid {
+    margin-left: 19px;
+    margin-right: 500px;
+    font-size: large;
+    color: dodgerblue;
+}
+.guid:hover{
+    color: #d1d3e2;
+}
+.topbar.navbar-light .navbar-nav .nav-item .nav-link:hover {
+    color: dodgerblue;
+}
+.topbar.navbar-light .navbar-nav .nav-item .nav-link:active {
+    color: dodgerblue;
+}
+
+.navbar{
+    position: fixed;
+    z-index: 9999;
+    width: 100%;
+
+}
+
+.modal.show .modal-dialog {
+    -webkit-transform: none;
+    transform: none;
+    margin-top: 80px;
+}
+
+.section-1 {
+    padding: 20vmin 0vmin;
+    margin-top: 164px;
+}
+.section-1 .row .col-md-6 .panel h1 {
+    font-weight: bold;
+    padding: 0.4em 0;
+    font-size: 2em;
+    color: #4b4747;
+}
+h3,h2,h1{
+        color: #4b4747;
+}
+
+.meteo td {
+    background-color: #F4F9FF;
+    height: 60px;
+    width: 630px;
+    color: black;
+}
+
+.currency-container h1{
+    color: #fff;
+}
+.topbar .topbar-divider {
+    width: 0;
+    border-right: 1px solid #9a9da7;
+    height: calc(4.375rem - 2rem);
+    margin: auto 1rem;
+}
+
+
+@media (max-width: 767px){
+.meteo{
+       margin-left: 0px;
+}
+@media (max-width: 767px){
+#contact{
+     margin-left: 74px;
+}
+}
+
+@media (max-width: 767px){
+.contact .php-email-form input, .contact .php-email-form textarea {
+       width: 175px;
+}}}
+@media (max-width: 767px){
+.contact .info iframe {
+       width: 260px;
+}}
+
+
+@media (max-width: 767px){
+.guid {
+     margin-right: 33px;
+    margin-left: -2px;
+    margin-top: 1px;
+}}
+
+@media (max-width: 767px){
+.navbar {
+  height: 91px;
+}}
+
+
+@media (max-width: 767px){
+.loisirsection {
+    margin-top: 1105px;
+}}
+
+@media (max-width: 767px){
+.containerport {
+  display: inline;
+}}
+
+@media (max-width: 767px){
+.portfolio_section .containerport .box {
+    margin-left: 108px;
+}}
+
+
+@media (max-width: 767px){
+#wrap {
+    margin-left: 148px;
+}}
+
+
+@media (max-width: 767px){
+.directionsContainer{
+     display: contents;
+}}
+
+@media (max-width: 767px){
+#myMap {
+    width: 100%;
+}}
+
+
+
+@media (max-width: 767px){
+.card {
+ 
+     margin-left: 130px; 
+}}
