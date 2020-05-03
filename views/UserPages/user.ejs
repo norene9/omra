@@ -1,0 +1,686 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <title>Hadj & Omra guid</title>
+    <link rel="stylesheet" href="/css/style.css">
+    <link rel="stylesheet" href="/css/mobile-style.css">
+    <link rel="stylesheet" href="/css/currency.css">
+    <link rel="stylesheet" href="/css/meteo.css">
+    <link href="https://fonts.googleapis.com/css2?family=Almarai:wght@300&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Almarai&family=Cairo&display=swap" rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Raleway:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i"
+        rel="stylesheet" />
+    <link href='https://fonts.googleapis.com/css?family=Lato:300,400,700,900' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" href="http://fontawesome.io/assets/font-awesome/css/font-awesome.css">
+    <!-- Google Fonts -->
+    <link
+        href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Raleway:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i"
+        rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Baloo+Chettan+2:wght@500&display=swap" rel="stylesheet">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/2.0.2/anime.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/weather-icons/2.0.10/css/weather-icons.min.css">
+    <link rel="stylesheet" href="/css/Rimouski.css">
+    <link rel="stylesheet" href="/css/met.css">
+    <link rel="stylesheet" href="/css/map.css">
+    <script src="/js/main.js"></script>
+    <!-----------------------  Script For GPS ------------------------------------>
+    <script
+        src='http://www.bing.com/api/maps/mapcontrol?callback=GetMap&key=An-DQwMckibyuZ0q93OLo5kSNITR6VevW6-zy4NGjlLPGxMLljye2k7SZHXRF1oU'
+        async defer></script>
+
+    <link href="/vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
+    <link
+        href="https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i"
+        rel="stylesheet">
+
+    <!-- Custom styles for this template-->
+    <link href="/css/user.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="/css/user.css">
+
+</head>
+
+<body id="page-top">
+    <!-- Page Wrapper -->
+    <div id="wrapper">
+        <!-- Content Wrapper -->
+        <div id="content-wrapper" class="d-flex flex-column">
+            <!-- Main Content -->
+            <div id="content">
+                <!-- Topbar -->
+                <nav class="navbar navbar-expand navbar-light bg-white topbar mb-4 static-top shadow">
+                    <!-- Sidebar Toggle (Topbar) -->
+
+                    <!-- Topbar Navbar -->
+                    <ul class="navbar-nav ml-auto">
+
+                        <div class="collapse navbar-collapse" id="navbarNav">
+                            <div class="guid"> <i class="fab fa-glide-g fa-2x"></i>uid for hadj & omra</i></a></div>
+                            <div class="mr-auto"></div>
+                            <ul class="navbar-nav nav1">
+                                <li class="nav-item active">
+                                    <a class="nav-link link1" href="http://localhost:8080">HOME
+                                        <span class="sr-only">(current)</span>
+                                    </a>
+                                </li>
+                                <li class="nav-item dropdown">
+                                    <div class="dropdown drop">
+                                        <a href="#" class="nav-link">MANASIK</a>
+                                        <div class="dropdown-content">
+                                            <a href="http://localhost:8080/manasik-hadj">MANASIK EL HADJ </a>
+                                            <a href="http://localhost:8080/manasik-omra">MANASIK EL OMRA</a>
+                                            <a href="http://localhost:8080/ad3iya">ADIYA</a>
+                                        </div>
+                                    </div>
+                                </li>
+
+
+                            </ul>
+
+                            <!-- Nav Item - Alerts -->
+                            <li class="nav-item dropdown no-arrow mx-1">
+                                <a class="nav-link dropdown-toggle" href="#" id="alertsDropdown" role="button"
+                                    data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                    <i class="fas fa-bell fa-fw"></i>
+                                    <!-- Counter - Alerts -->
+                                    <span class="badge badge-danger badge-counter"></span>
+                                </a>
+                                <!-- Dropdown - Alerts -->
+                                <div class="dropdown-list dropdown-menu dropdown-menu-right shadow animated--grow-in"
+                                    aria-labelledby="alertsDropdown">
+                                    <h6 class="dropdown-header">
+                                        Alerts Center
+                                    </h6>
+                                    <a class="dropdown-item d-flex align-items-center" href="#">
+                                        <div class="mr-3">
+                                            <div class="icon-circle bg-primary">
+                                                <i class="fas fa-file-alt text-white"></i>
+                                            </div>
+                                        </div>
+                                        <div>
+                                            <div class="small text-gray-500">December 12, 2019</div>
+                                            <span class="font-weight-bold">message 1</span>
+                                        </div>
+                                    </a>
+                                    <a class="dropdown-item d-flex align-items-center" href="#">
+                                        <div class="mr-3">
+                                            <div class="icon-circle bg-success">
+                                                <i class="fas fa-donate text-white"></i>
+                                            </div>
+                                        </div>
+                                        <div>
+                                            <div class="small text-gray-500">December 2, 2019</div>
+                                            message 2
+                                        </div>
+                                    </a>
+                                    <a class="dropdown-item d-flex align-items-center" href="#">
+                                        <div class="mr-3">
+                                            <div class="icon-circle bg-warning">
+                                                <i class="fas fa-exclamation-triangle text-white"></i>
+                                            </div>
+                                        </div>
+                                        <div>
+                                            <div class="small text-gray-500">December 2, 2019</div>
+                                            message 3
+                                        </div>
+                                    </a>
+                                    <a class="dropdown-item text-center small text-gray-500" href="#">Show All
+                                        Alerts</a>
+                                </div>
+                            </li>
+
+                            <!-- Nav Item - Messages -->
+                            <!-- Nav Item - Messages -->
+                          <!---- <li class="nav-item dropdown no-arrow mx-1">
+                                <a class="nav-link dropdown-toggle" href="#" id="messagesDropdown" role="button" data-toggle="dropdown"
+                                    aria-haspopup="true" aria-expanded="false">
+                                    <i class="fas fa-envelope fa-fw"></i>
+                                 
+                                    <span class="badge badge-danger badge-counter">7</span>
+                                </a>
+                               
+                                <div class="dropdown-list dropdown-menu dropdown-menu-right shadow animated--grow-in"
+                                    aria-labelledby="messagesDropdown">
+                                    <h6 class="dropdown-header">
+                                        Message Center
+                                    </h6>
+                                    <a class="dropdown-item d-flex align-items-center" href="#">
+                                        <div class="dropdown-list-image mr-3">
+                                            <img class="rounded-circle" src="">
+                                            <div class="status-indicator bg-success"></div>
+                                        </div>
+                                        <div class="font-weight-bold">
+                                            <div class="text-truncate">message 1.</div>
+                                            <div class="small text-gray-500">user2 · 58m</div>
+                                        </div>
+                                    </a>
+                                    <a class="dropdown-item d-flex align-items-center" href="#">
+                                        <div class="dropdown-list-image mr-3">
+                                            <img class="rounded-circle">
+                                            <div class="status-indicator"></div>
+                                        </div>
+                                        <div>
+                                            <div class="text-truncate">message 2</div>
+                                            <div class="small text-gray-500">user3 · 1d</div>
+                                        </div>
+                                    </a>
+                                    <a class="dropdown-item d-flex align-items-center" href="#">
+                                        <div class="dropdown-list-image mr-3">
+                                            <img class="rounded-circle">
+                                            <div class="status-indicator bg-warning"></div>
+                                        </div>
+                                        <div>
+                                            <div class="text-truncate">message 3</div>
+                                            <div class="small text-gray-500"> user4 · 2d</div>
+                                        </div>
+                                    </a>
+                                    <a class="dropdown-item d-flex align-items-center" href="#">
+                                        <div class="dropdown-list-image mr-3">
+                                            <img class="rounded-circle">
+                                            <div class="status-indicator bg-success"></div>
+                                        </div>
+                                        <div>
+                                            <div class="text-truncate">message 5...</div>
+                                            <div class="small text-gray-500">user 6 · 2w</div>
+                                        </div>
+                                    </a>
+                                    <a class="dropdown-item text-center small text-gray-500" href="#">Read More
+                                        Messages</a>
+                                </div>
+                            </li>---->
+
+                            <div class="topbar-divider d-none d-sm-block"></div>
+
+
+
+                            <!-- Nav Item - User Information -->
+                            <li class="nav-item dropdown no-arrow">
+                                <a class="nav-link dropdown-toggle" href="#" id="userDropdown" role="button"
+                                    data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                    <span class="mr-2 d-none d-lg-inline text-gray-600 small">User Name</span>
+                                    <img class="img-profile rounded-circle" src="img/admin.png">
+                                </a>
+                                <!-- Dropdown - User Information -->
+                                <div class="dropdown-menu dropdown-menu-right shadow animated--grow-in"
+                                    aria-labelledby="userDropdown">
+                                    <a class="dropdown-item" href="#">
+                                        <i class="fas fa-user fa-sm fa-fw mr-2 text-gray-400"></i>
+                                        Profile
+                                    </a>
+                                    <a class="dropdown-item" href="#">
+                                        <i class="fas fa-cogs fa-sm fa-fw mr-2 text-gray-400"></i>
+                                        Settings
+                                    </a>
+                                    <a class="dropdown-item" href="#">
+                                        <i class="fas fa-list fa-sm fa-fw mr-2 text-gray-400"></i>
+                                        Activity Log
+                                    </a>
+                                    <div class="dropdown-divider"></div>
+                                    <a class="dropdown-item" href="#" data-toggle="modal" data-target="#logoutModal">
+                                        <i class="fas fa-sign-out-alt fa-sm fa-fw mr-2 text-gray-400"></i>
+                                        Logout
+                                    </a>
+                                </div>
+                            </li>
+
+                    </ul>
+
+                </nav>
+                <!-- End of Topbar -->
+            </div>
+            <!-- End of Main Content -->
+
+
+            <section class="section-1" id="section-1">
+                <div class="container text-center">
+                    <div class="row">
+                        <div class="col-md-6 col-12">
+                            <div class="pray">
+                                <img src="/img/hadj30.jpg" alt="Pray" class="" />
+                            </div>
+                        </div>
+                        <div class="col-md-6 col-12">
+                            <div class="panel text-left">
+                                <h1 style="font-family: 'Almarai', sans-serif;"> قبل الرحلة </h1>
+                                <p class="pt-4" style="font-family: 'Almarai', sans-serif; font-size: larger;">
+                                    في الأيام الأولى من شهر ذي الحجة من كل عام تهفو قلوب المسلمين وتتجه أنظارهم نحو بيت
+                                    الله الحرام،
+                                    يحدوها
+                                    الشوق ويدفعها
+                                    الأمل فيما عند الله سبحانه وتعالى، مستجيبين لدعوة أبيهم إبراهيم عليه السلام عندما
+                                    أمره الله
+                                    بقوله: "وأذن
+                                    في الناس بالحَج
+                                    يأتوك رجالا وعلى كل ضَامر يأتين من كل فج عميق" (سورة الحج). ولذلك نعرض هنا لأهم ما
+                                    ينبغي للحاج
+                                    الإلمام
+                                    به
+                                    من أحكام هذه
+                                    الشعيرة العظيمة.
+                                </p>
+                                <a href="http://localhost:8080/avant_voyage" class="btnstyle"
+                                    style="font-family: 'Almarai', sans-serif; font-size: large;">ماذا يدجب أن
+                                    تعرف</a>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section class="section-2 container-fluid p-0">
+                <div class="cover">
+                    <div class="container-fluid text-center">
+                        <div class=" d-flex flex-md-row flex-wrap justify-content-center">
+                            <!-----card2----->
+                            <div class="containermanasik" style="font-family: 'Almarai', sans-serif;">
+                                <div class="card">
+                                    <img src="/img/manasik5.jpg">
+                                    <h3>مناسك الحج</h3>
+                                    <p>مَناسك الحج هي الأعمال التي يقوم بها المسلم قبل وأثناء ونهاية الحج وهي التي أراها
+                                        الله عز وجل
+                                        لنبيه
+                                        وخليله إبراهيم.
+                                    </p>
+                                    <div class="data-container">
+                                        <span class="btn2"><a href="http://localhost:8080/manasik-hadj">Read
+                                                More</a></span>
+                                    </div>
+                                </div>
+                                <div class="card">
+                                    <img src="/img/manasik2.jpg">
+                                    <h3>مناسك العمرة</h3>
+                                    <p> العمرة هي زيارة المسجد الحرام في مكة
+                                        لأداء مناسك خاصة، كالطواف، السعي والحلق. والعمرة مشروعة بأصل الإسلام،</p>
+                                    <div class="data-container">
+                                        <span class="btn2"><a href="http://localhost:8080/manasik-omra">Read
+                                                More</a></span>
+                                    </div>
+                                </div>
+                                <div class="card">
+                                    <img src="/img/doaa9.jpg">
+                                    <h3>أدعية</h3>
+                                    <p>الدعاء في الإسلام هي عبادة تقوم على سؤال العبد ربَّه والطلب منه وهي عبادة من أفضل
+                                        العبادات
+                                        التي يحبها
+                                        الله خالصةً له
+                                    </p>
+                                    <div class="data-container">
+                                        <span class="btn2"><a href="http://localhost:8080/ad3iya">Read More</a></span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-----end of card2------>
+                    </div>
+                </div>
+
+
+
+                <!----loisir------>
+                <section class="loisirsection">
+                    <div id="wrap">
+                        <p>l</p>
+                        <p>o</p>
+                        <p>a</p>
+                        <p>s</p>
+                        <p>i</p>
+                        <p>r</p>
+                        <p>e</p>
+                    </div>
+                    <section class="portfolio_section layout_padding">
+                        <div class="containerport">
+                            <div class="box">
+                                <div class="imgBx">
+                                    <img src="/img/resto1.jpg" />
+                                </div>
+                                <div class="content">
+                                    <h2>Restaurant</h2>
+                                    <p>
+                                        Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do
+                                        eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                                    </p>
+                                    <a href="http://localhost:8080/loisir1">Read More</a>
+                                </div>
+                            </div>
+                            <div class="box box2">
+                                <div class="imgBx">
+                                    <img src="/img/plcae2.jpg" />
+                                </div>
+                                <div class="content">
+                                    <h2>Places</h2>
+                                    <p>
+                                        Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do
+                                        eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                                    </p>
+                                    <a href="http://localhost:8080/loisir1">Read More</a>
+                                </div>
+                            </div>
+                            <div class="box box3">
+                                <div class="imgBx">
+                                    <img src="/img/hotel4.jpg" />
+                                </div>
+                                <div class="content">
+                                    <h2>Hotels</h2>
+                                    <p>
+                                        Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do
+                                        eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                                    </p>
+                                    <a href="http://localhost:8080/loisir2">Read More</a>
+                                </div>
+                            </div>
+
+                        </div>
+                    </section>
+                </section>
+                <!------end of loisir-------->
+
+
+
+
+        </div>
+    </div>
+
+    <!------météo api------->
+    <section class="meteo">
+        <span id="date_heure" alt=""></span>
+        <script type="text/javascript">window.onload = date_heure('date_heure');</script>
+
+
+
+        <br><br>
+        <section class="meteo2">
+            <div class="containermet">
+                <div class="app-title">
+                    <h1>Weather</h1>
+                </div>
+                <div class="notification"> </div>
+                <div class="weather-container">
+                    <div class="weather-icon">
+                        <img src="/img/icons/unknown.png" alt="">
+                    </div>
+                    <div class="temperature-value">
+                        <p>- °<span>C</span></p>
+                    </div>
+                    <div class="temperature-description">
+                        <p> - </p>
+                    </div>
+                    <div class="location">
+                        <p>-</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!--------weather warda------>
+
+        <!-----------
+                  <section id="app"></section>
+                  <br>
+            
+                  <i class="wi" id="cc"></i>
+                  <h2> <i class="wi wi-thermometer"></i>
+                    <span id="temperature"></span> C°
+                    <br> <span id="conditions">
+            
+                      <div class="container">
+                        <div class="text"></div>
+                      </div>
+            
+                    </span>
+            
+            
+                  </h2>
+            
+            
+                  <h1> <span id="ville"></span> </h1>
+                  <br><br> --->
+        <!---------end weather warda---->
+        <div class="col-3 input-effect"><br>
+            <input class="effect-1" id="queryLoc" type="text" placeholder="Saisir la ville,pays">
+            <br> <br>
+            <button class="mybtn" onclick="buttonClickGET()">Voir Météo</button>
+        </div>
+        <br><br><br><br>
+        </div>
+        <p id="zone_meteo"></p>
+        <br>
+    </section>
+    <!--------end of météo api----->
+    </section>
+    <section class="sectiondiv">
+        <!-------currency convert--------->
+        <div class="currency-container">
+
+            <div class="containercur">
+                <div class="header">
+                    <h1>Currency Converter</h1>
+                </div>
+                <div class="date"></div>
+                <ul class="currencies"></ul>
+                <button class="add-currency-btn"><i class="fas fa-long-arrow-alt-left"></i>Add
+                    Currency</button>
+                <ul class="add-currency-list"></ul>
+            </div>
+        </div>
+        <!------currency convert------>
+    </section>
+
+
+    <div class="mapdiv">
+        <h2>Pour utiliser notre map</h2>
+    </div>
+
+    <!-------------------------( GPS )--------------------------------------------------->
+    <section class="section-4 container-fluid p-0 text-center">
+
+        <div class="row">
+            <div class="col-md-12 col-sm-12">
+                <div class="directionsContainer">
+                    <div id="directionsPanel"></div>
+                    <div id="directionsItinerary"></div>
+                </div>
+                <div id="myMap"></div>
+                <input type="button" value="Start Continuous Tracking" onclick="StartTracking()" />
+                <input type="button" value="Stop Continuous Tracking" onclick="StopTracking()" />
+            </div>
+        </div>
+    </section>
+    <!-------------------------------------------------------------------------------->
+
+
+
+    <section class="section-3 container-fluid p-0 text-center">
+        <div class="row">
+            <div class="col-md-12 col-sm-12">
+                <h1>You can use our app in any Platform</h1>
+                <p>
+                    Lorem ipsum dolor, sit amet consectetur adipisicing elit. Eum exercitationem alias perspiciatis
+                    omnis
+                    quod
+                    possimus odit
+                    voluptatum! Sunt ea quasi praesentium, tenetur doloribus animi obcaecati, sint nemo quae laudantium
+                    iusto
+                    unde
+                    eaque nostrum nobis voluptatum
+                </p>
+            </div>
+        </div>
+        <div class="platform row">
+            <div class="col-md-6 col-sm-12 text-right">
+                <div class="desktop shadow-lg">
+                    <div class="d-flex flex-row justify-content-center">
+                        <i class="fas fa-desktop fa-3x py-2 pr-3"></i>
+                        <div class="text text-left">
+                            <h3 class="pt-1 m-0">Desktop</h3>
+                            <p class="p-0 m-0">On website</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6 col-sm-12 text-left">
+                <div class="desktop shadow-lg">
+                    <div class="d-flex flex-row justify-content-center">
+                        <i class="fas fa-mobile-alt fa-3x py-2 pr-3"></i>
+                        <div class="text text-left">
+                            <h3 class="pt-1 m-0">On Mobile</h3>
+                            <p class="p-0 m-0">On Play Store</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- ======= Contact Section ======= -->
+    <section id="contact" class="contact">
+        <div class="container">
+            <div class="section-title">
+                <h2 style="font-size: 50px; font-family: 'Baloo Chettan 2', cursive;    color: #3e3e3e;
+        line-height: 35px;
+        font-weight: bold; text-align:center;">Pour nous contacter</h2>
+
+            </div>
+
+            <div class="row" data-aos="fade-in">
+                <div class="col-lg-5 d-flex align-items-stretch">
+                    <div class="info">
+                        <div class="address">
+                            <i class="fas fa-map-marker-alt"></i>
+                            <h4>Location:</h4>
+                            <p>École supérieure en informatique de Sidi Bel Abbès</p>
+                        </div>
+
+                        <div class="email">
+                            <i class="fas fa-envelope-open"></i>
+                            <h4>Email:</h4>
+                            <p>etudaiant3@esi-sba.dz</p>
+                        </div>
+
+                        <div class="phone">
+                            <i class="fas fa-phone-volume"></i>
+                            <h4>Call:</h4>
+                            <p>+213 xxxxxx</p>
+                        </div>
+
+                        <iframe
+                            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3259.8674539860676!2d-0.6353639853632892!3d35.20977038030695!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xd7f00290df8ed91%3A0x91bd238762e84ce4!2s%C3%89cole%20sup%C3%A9rieure%20en%20informatique%20de%20Sidi%20Bel%20Abb%C3%A8s!5e0!3m2!1sfr!2sdz!4v1587398772065!5m2!1sfr!2sdz"
+                            frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"
+                            style="border:0; width: 100%; height: 280px;"></iframe>
+                    </div>
+                </div>
+
+                <div class="col-lg-7 mt-5 mt-lg-0 d-flex align-items-stretch">
+                    <form method="post" role="form" class="php-email-form">
+                        <div class="form-row">
+                            <div class="form-group col-md-6">
+                                <label for="name">Your Name</label>
+                                <input type="text" name="name" class="form-control" id="name" data-rule="minlen:4"
+                                    data-msg="Please enter at least 4 chars" />
+                                <div class="validate"></div>
+                            </div>
+
+                        </div>
+                        <div class="emaildiv">
+                            <div class="form-group col-md-6">
+                                <label class="emaillabel" for="name">Your Email</label>
+                                <input type="email" class="form-control inputlabel" name="email" id="email"
+                                    data-rule="email" data-msg="Please enter a valid email" />
+                                <div class="validate"></div>
+                            </div>
+                        </div>
+
+
+                        <div class="form-group">
+                            <label for="name">Subject</label>
+                            <input type="text" class="form-control" name="subject" id="subject" data-rule="minlen:4"
+                                data-msg="Please enter at least 8 chars of subject" />
+                            <div class="validate"></div>
+                        </div>
+                        <div class="form-group">
+                            <label for="name">Message</label>
+                            <textarea class="form-control" name="message" rows="10" data-rule="required"
+                                data-msg="Please write something for us"></textarea>
+                            <div class="validate"></div>
+                        </div>
+                        <div class="mb-3">
+                            <div class="loading">Loading</div>
+                            <div class="error-message"></div>
+                            <div class="sent-message">
+                                Your message has been sent. Thank you!
+                            </div>
+                        </div>
+                        <div class="text-center">
+                            <button type="submit">Send Message</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- End Contact Section -->
+
+    <!-- Footer -->
+
+    <!-- End of Footer -->
+
+    </div>
+    <!-- End of Content Wrapper -->
+
+    </div>
+    <!-- End of Page Wrapper -->
+
+    <!-- Scroll to Top Button-->
+    <a class="scroll-to-top rounded" href="#page-top">
+        <i class="fas fa-angle-up"></i>
+    </a>
+
+    <!-- Logout Modal-->
+    <div class="modal fade" id="logoutModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+        aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">Ready to Leave?</h5>
+                    <button class="close" type="button" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">×</span>
+                    </button>
+                </div>
+                <div class="modal-body">Select "Logout" below if you are ready to end your current session.</div>
+                <div class="modal-footer">
+                    <button class="btn btn-secondary" type="button" data-dismiss="modal">Cancel</button>
+                    <a class="btn btn-primary" href="#">Logout</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="/js/main.js"></script>
+    <script src="/js/currency.js"></script>
+    <script src="/js/date-heure.js"></script>
+    <script src="/js/meteo.js"></script>
+    <script src="/js/met.js"></script>
+    <script src="/js/map.js"></script>
+    <script src="/js/contact.js"></script>
+    <script src="/js/main2.js"></script>
+
+    <!-- Bootstrap core JavaScript-->
+    <script src="/vendor/jquery/jquery.min.js"></script>
+    <script src="/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <!-- Core plugin JavaScript-->
+    <script src="/vendor/jquery-easing/jquery.easing.min.js"></script>
+    <!-- Custom scripts for all pages-->
+    <script src="/js/sb-admin-2.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"
+        integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+
+</body>
+
+<%- include ("footer") %>
