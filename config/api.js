@@ -23,13 +23,13 @@ router.use(session({
   }
 }))
 
-// const redirectLogin =(req,res,next)=>{
-//   if (!req.session.userId){
-//     res.redirect('/signup')
-//   }else {
-//     next()
-//   }
-// }
+const redirectLogin =(req,res,next)=>{
+  if (!req.session.userId){
+    res.redirect('/signup')
+  }else {
+    next()
+  }
+}
 
 // const redirectHome =(req,res,next)=>{
 //   if (req.session.userId){
@@ -115,14 +115,14 @@ router.post('/login',async (req,res,next)=>{
 })
 //-----------------------------------------------------------------------------
 //     Logout
-router.post('/logout',(req , res)=>{
+router.get('/logout',(req , res)=>{
   req.session.destroy(err=>{
     if(err){
-      return   res.render('Home page/index');
-    }
+      return res.redirect('/');
+    }})
     res.clearCookie('sid')
-    res.render('Home page/signup')
-  })
+    res.redirect('/signup')
+
 })
 // -----------------------------------------------------------------------------
 //Forgot a password
@@ -169,7 +169,7 @@ router.get('/',(request,response)=>{
 
   });})
 //------------Afficher la derniere question User session------------------------
-  router.get('/user',(request,response)=>{
+  router.get('/user',redirectLogin,(request,response)=>{
     var sql = "SELECT * FROM message ORDER BY id DESC LIMIT 1";
     var message=request.body.message;
     mysqlConnection.query(sql, function(error, results) {
