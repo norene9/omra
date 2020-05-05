@@ -1,0 +1,77 @@
+body{       
+    padding: 0;
+    margin: 10px;
+    background: rgb(247,249,251); 
+   
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#a90329', endColorstr='#6d0019',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */
+    font-size:18px
+}
+
+
+form{width:780px;}
+
+fieldset{margin:40px auto}
+
+       
+label{
+    padding: 0;
+    display: block;
+    padding :10px;
+    font-family: tahoma;
+    border: 4px
+}
+            
+input[type="text"], input[type="email"] {
+    width: 400px;
+    height: 38px;
+}
+
+input[type="radio"]{
+    display: inline;
+    color: #000;
+}
+
+input[type="submit"],
+input[type="reset"]
+{
+    background: none;
+    padding: 5px 15px;
+    border: 2px solid #8f0222;
+    font-weight: bold
+}
+select {
+    width: 221px;
+    height: 33px;
+}
+.content{
+  width:780px;
+  margin:auto
+}
+.form-check-label {
+    margin-bottom: 0px;
+    margin-top: -25px;
+}
+
+.gender{
+    margin-top: -24px;
+
+}
+.status select {
+    margin-left: -8px;
+}
+.gender .form-check {
+    /* position: relative; */
+    /* display: block; */
+    padding-left: 2.25rem;
+}
+
+.personal {
+    margin-bottom: 32px;
+    margin-top: 50px;
+    text-align: center;
+     font-size: 3.1rem;
+}
+.btn{
+    margin-bottom: 50px;
+      font-size: 1.3rem;
+}
