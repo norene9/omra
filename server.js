@@ -77,8 +77,17 @@ app.get('/loisir2', (request, response) => {
 //------------------------------------------------------------------------------
 
 //-------------------(Routes For Users)-----------------------------------------
-app.get('/user',redirectLogin,(request, response)=>{
+app.get('/use',redirectLogin,(request, response)=>{
   response.render('UserPages/index')
+})
+app.get('/user',redirectLogin,(request, response)=>{
+  response.render('UserPages/user')
+})
+app.get('/user/transport',redirectLogin,(request, response)=>{
+  response.render('UserPages/transport')
+})
+app.get('/user/fi9h_hadj',redirectLogin,(request, response)=>{
+  response.render('UserPages/fi9h_hadj')
 })
 app.get('/user/avant_voyage',redirectLogin, (request, response) => {
   response.render('UserPages/avant_voyage')
@@ -109,6 +118,9 @@ app.get('/user/hadj-kiran',redirectLogin, (request, response) => {
 })
 app.get('/user/hadj-tamato3',redirectLogin, (request, response) => {
   response.render('UserPages/hadj-tamato3')
+})
+app.get('/form',redirectLogin,(request, response) => {
+  response.render('UserPages/form')
 })
 //------------------------------------------------------------------------------
 

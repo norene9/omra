@@ -1,13 +1,13 @@
-//---------------(Dependencies)-------------------
+//------------------------(Dependencies)------------------------------
 const express = require('express')
 const bodyParser = require('body-parser')
 const session = require('express-session')
 const bcrypt = require('bcrypt')
 const sgMail = require('@sendgrid/mail');
 let mysqlConnection= require('./config')
-//------------------------------------------------
+//-----------------------------------------------------------------------
 
-//----------middelware
+//-------------------------(middelware)------------------------------------
 let router = express.Router();
 router.use(bodyParser.urlencoded({ extended: false }))
 router.use(bodyParser.json())
@@ -30,14 +30,27 @@ const redirectLogin =(req,res,next)=>{
     next()
   }
 }
-
-// const redirectHome =(req,res,next)=>{
-//   if (req.session.userId){
-//     res.redirect('/user')
-//   }else {
-//     next()
-//   }
-// }
+// router.use((request, response) => {
+//   var sql =" SELECT * from users WHERE idUsers = ?";
+//   mysqlConnection.query(sql, [request.session.userId],(err,rows,fields)=>{
+//    if (!err) {
+//      console.log(rows);
+//      return {
+//        name:rows.UserName,
+//        mail:rows.UserMail,
+//        country:rows.country,
+//        status:rows.status,
+//        gender:rows.genre,
+//        date:rows.date_naiss,
+//        image:rows.img,
+//      }
+//    }
+//    else {
+//       res.status(500).send(error.message)
+//     }
+// })
+// })
+//---------------------------------------------------------------
 
 //-------------(Send mail:forgot password)-------------
 //you get your SENDGRID_API_KEY when u create new AÏ_KEY in Send Grid
@@ -52,10 +65,10 @@ var msg = {
   html: '',
 };
 
-//------------------------------------------------------
+//------------------------------------------------------------------------------
 
-///------------------(Routes: SQl Query)-----------------
-
+///------------------(Routes: SQl Query)----------------------------------------
+var nameuser = 'User Name'
 //Post login data (Add user in DB)
 router.post('/register', async (req,res,next)=>{
   try{
@@ -77,8 +90,18 @@ router.post('/register', async (req,res,next)=>{
     mysqlConnection.query(sql, [user.mail],async (err,rows,fields)=>{
       if (!err) {
           req.session.userId = rows[0].idUsers
+          nameuser =  rows[0].UserName
           console.log('User Id ==> ',req.session.userId);
-          res.redirect('/user')
+          // res.redirect('/user',{name:rows[0].UserName})
+          res.render('UserPages/user',{
+            name:nameuser,
+            mail:rows[0].UserMail,
+            country:rows[0].country,
+            status:rows[0].status,
+            gender:rows[0].genre,
+            Date:rows[0].date_naiss,
+            image:rows[0].img
+          })
          }
       else {
         console.log(err);
@@ -89,7 +112,7 @@ router.post('/register', async (req,res,next)=>{
   }
 
 });
-
+//---------------------------------
 //Post login : to get the users infos
 router.post('/login',async (req,res,next)=>{
   try {
@@ -100,8 +123,17 @@ router.post('/login',async (req,res,next)=>{
       if (!err) {
         if ( (await bcrypt.compare(user.password2,rows[0].UserPassword)) || (user.password2 === rows[0].tokenKey) )
          {  req.session.userId = rows[0].idUsers
+            nameuser =  rows[0].UserName
             console.log('User Id ==> ',req.session.userId);
-            res.redirect('/user')
+            res.render('UserPages/user',{
+              name:nameuser,
+              mail:rows[0].UserMail,
+              country:rows[0].country,
+              status:rows[0].status,
+              gender:rows[0].genre,
+              Date:rows[0].date_naiss,
+              image:rows[0].img
+            })
             console.log({mail:user.mail2,
                          psw:user.password2});}
          }
@@ -113,7 +145,7 @@ router.post('/login',async (req,res,next)=>{
     res.status(500).send(error.message)
   }
 })
-//-----------------------------------------------------------------------------
+//----------------------------------
 //     Logout
 router.get('/logout',(req , res)=>{
   req.session.destroy(err=>{
@@ -124,7 +156,7 @@ router.get('/logout',(req , res)=>{
     res.redirect('/signup')
 
 })
-// -----------------------------------------------------------------------------
+// ---------------------------------
 //Forgot a password
 router.post('/forgotPSW', async(request, response) => {
   var mail=request.body
@@ -153,8 +185,76 @@ router.post('/forgotPSW', async(request, response) => {
   }
 });
 })
+//-----------------------
+//   Form for users
+router.get('/form',redirectLogin,(request, response) => {
+  var sql =" SELECT * from users WHERE idUsers = ?";
+  mysqlConnection.query(sql, [request.session.userId],async(err,rows,fields)=>{
+  response.render('UserPages/form',{
+    name:rows[0].UserName,
+    mail:rows[0].UserMail,
+    country:rows[0].country,
+    status:rows[0].status,
+    gender:rows[0].genre,
+    date:rows[0].date_naiss,
+    image:rows[0].img
+  })
+})
+})
+//----------------Update the data of Users
+router.post('/forum',redirectLogin,(request, response) => {
+   console.log('update data ');
+   var infos=request.body
+        //Check if there is sommething that didn't change in our db
+        var sql =" SELECT * from users WHERE idUsers = ?";
+        mysqlConnection.query(sql, [request.session.userId],async(err,rows,fields)=>{
+          if (infos.name==''){
+            infos.name=rows[0].UserName
+          }
+          if (infos.mail==''){
+            infos.mail=rows[0].UserMail
+          }
+          if (infos.country==''){
+            infos.country=rows[0].country
+          }
+          if (infos.status==''){
+            infos.status=rows[0].status
+          }
+          if (infos.gender==''){
+            infos.gender=rows[0].genre
+          }
+          if (infos.Date==''){
+            infos.Date=rows[0].date_naiss
+          }
+          if (infos.image==''){
+            infos.image=rows[0].img
+          }
 
-//-----------------------------------------------------------------------------
+          // This querry for update date in our db
+          sql = "UPDATE users SET UserName=?,UserMail=?,status=?,country=?,genre=?,date_naiss=?,img=? WHERE idUsers = ?"
+          mysqlConnection.query(sql, [infos.name,infos.mail,infos.status,infos.country,infos.gender,infos.Date,infos.image,request.session.userId],async(err,rows,fields)=>{
+            if (!err) {
+              console.log('Update data successfuly');
+              response.render('UserPages/form',{
+                name: infos.name,
+                mail:infos.mail,
+                country:infos.country,
+                status:infos.status,
+                gender:infos.gender,
+                date:infos.Date,
+                image:infos.image
+              })
+            }
+            else {
+               console.log(err);
+             }
+
+   });
+        })
+
+})
+
+//------------------------------------------------------------------------------
 
 //Aficher la derniere question
 router.get('/',(request,response)=>{
@@ -177,9 +277,8 @@ router.get('/',(request,response)=>{
             throw error;
         }
 
-        response.render('UserPages/index',{comment:results})
+        response.render('UserPages/user',{comment:results})
 
     });})
 // -------------------------------------------------------------------------------
 module.exports = router;
-// module.exports =  redirectHome

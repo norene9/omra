@@ -66,7 +66,7 @@
                             <div class="mr-auto"></div>
                             <ul class="navbar-nav nav1">
                                 <li class="nav-item active">
-                                    <a class="nav-link link1" href="http://localhost:8080">HOME
+                                    <a class="nav-link link1" href="http://localhost:8080/user">HOME
                                         <span class="sr-only">(current)</span>
                                     </a>
                                 </li>
@@ -74,9 +74,9 @@
                                     <div class="dropdown drop">
                                         <a href="#" class="nav-link">MANASIK</a>
                                         <div class="dropdown-content">
-                                            <a href="http://localhost:8080/manasik-hadj">MANASIK EL HADJ </a>
-                                            <a href="http://localhost:8080/manasik-omra">MANASIK EL OMRA</a>
-                                            <a href="http://localhost:8080/ad3iya">ADIYA</a>
+                                            <a href="http://localhost:8080/user/manasik-hadj">MANASIK EL HADJ </a>
+                                            <a href="http://localhost:8080/user/manasik_omra">MANASIK EL OMRA</a>
+                                            <a href="http://localhost:8080/user/ad3iya">ADIYA</a>
                                         </div>
                                     </div>
                                 </li>
@@ -142,10 +142,10 @@
                                 <a class="nav-link dropdown-toggle" href="#" id="messagesDropdown" role="button" data-toggle="dropdown"
                                     aria-haspopup="true" aria-expanded="false">
                                     <i class="fas fa-envelope fa-fw"></i>
-                                 
+
                                     <span class="badge badge-danger badge-counter">7</span>
                                 </a>
-                               
+
                                 <div class="dropdown-list dropdown-menu dropdown-menu-right shadow animated--grow-in"
                                     aria-labelledby="messagesDropdown">
                                     <h6 class="dropdown-header">
@@ -204,13 +204,13 @@
                             <li class="nav-item dropdown no-arrow">
                                 <a class="nav-link dropdown-toggle" href="#" id="userDropdown" role="button"
                                     data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                    <span class="mr-2 d-none d-lg-inline text-gray-600 small">User Name</span>
-                                    <img class="img-profile rounded-circle" src="img/admin.png">
+                                    <span class="mr-2 d-none d-lg-inline text-gray-600 small"><%= name %></span>
+                                    <img class="img-profile rounded-circle" src="<%= image %>">
                                 </a>
                                 <!-- Dropdown - User Information -->
                                 <div class="dropdown-menu dropdown-menu-right shadow animated--grow-in"
                                     aria-labelledby="userDropdown">
-                                    <a class="dropdown-item" href="#">
+                                    <a class="dropdown-item" href="http://localhost:8080/form">
                                         <i class="fas fa-user fa-sm fa-fw mr-2 text-gray-400"></i>
                                         Profile
                                     </a>
@@ -223,7 +223,7 @@
                                         Activity Log
                                     </a>
                                     <div class="dropdown-divider"></div>
-                                    <a class="dropdown-item" href="#" data-toggle="modal" data-target="#logoutModal">
+                                    <a class="dropdown-item" href="/logout" data-toggle="modal" data-target="#logoutModal">
                                         <i class="fas fa-sign-out-alt fa-sm fa-fw mr-2 text-gray-400"></i>
                                         Logout
                                     </a>
@@ -265,7 +265,7 @@
                                     من أحكام هذه
                                     الشعيرة العظيمة.
                                 </p>
-                                <a href="http://localhost:8080/avant_voyage" class="btnstyle"
+                                <a href="http://localhost:8080/user/avant_voyage" class="btnstyle"
                                     style="font-family: 'Almarai', sans-serif; font-size: large;">ماذا يدجب أن
                                     تعرف</a>
                             </div>
@@ -290,7 +290,7 @@
                                         وخليله إبراهيم.
                                     </p>
                                     <div class="data-container">
-                                        <span class="btn2"><a href="http://localhost:8080/manasik-hadj">Read
+                                        <span class="btn2"><a href="http://localhost:8080/user/manasik-hadj">Read
                                                 More</a></span>
                                     </div>
                                 </div>
@@ -300,7 +300,7 @@
                                     <p> العمرة هي زيارة المسجد الحرام في مكة
                                         لأداء مناسك خاصة، كالطواف، السعي والحلق. والعمرة مشروعة بأصل الإسلام،</p>
                                     <div class="data-container">
-                                        <span class="btn2"><a href="http://localhost:8080/manasik-omra">Read
+                                        <span class="btn2"><a href="http://localhost:8080/user/manasik_omra">Read
                                                 More</a></span>
                                     </div>
                                 </div>
@@ -313,7 +313,7 @@
                                         الله خالصةً له
                                     </p>
                                     <div class="data-container">
-                                        <span class="btn2"><a href="http://localhost:8080/ad3iya">Read More</a></span>
+                                        <span class="btn2"><a href="http://localhost:8080/user/ad3iya">Read More</a></span>
                                     </div>
                                 </div>
                             </div>
@@ -347,7 +347,7 @@
                                         Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do
                                         eiusmod tempor incididunt ut labore et dolore magna aliqua.
                                     </p>
-                                    <a href="http://localhost:8080/loisir1">Read More</a>
+                                    <a href="http://localhost:8080/user/loisir">Read More</a>
                                 </div>
                             </div>
                             <div class="box box2">
@@ -360,7 +360,7 @@
                                         Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do
                                         eiusmod tempor incididunt ut labore et dolore magna aliqua.
                                     </p>
-                                    <a href="http://localhost:8080/loisir1">Read More</a>
+                                    <a href="http://localhost:8080/user/loisir">Read More</a>
                                 </div>
                             </div>
                             <div class="box box3">
@@ -373,7 +373,7 @@
                                         Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do
                                         eiusmod tempor incididunt ut labore et dolore magna aliqua.
                                     </p>
-                                    <a href="http://localhost:8080/loisir2">Read More</a>
+                                    <a href="http://localhost:8080/user/loisir2">Read More</a>
                                 </div>
                             </div>
 
@@ -423,22 +423,22 @@
         <!-----------
                   <section id="app"></section>
                   <br>
-            
+
                   <i class="wi" id="cc"></i>
                   <h2> <i class="wi wi-thermometer"></i>
                     <span id="temperature"></span> C°
                     <br> <span id="conditions">
-            
+
                       <div class="container">
                         <div class="text"></div>
                       </div>
-            
+
                     </span>
-            
-            
+
+
                   </h2>
-            
-            
+
+
                   <h1> <span id="ville"></span> </h1>
                   <br><br> --->
         <!---------end weather warda---->
@@ -656,7 +656,7 @@
                 <div class="modal-body">Select "Logout" below if you are ready to end your current session.</div>
                 <div class="modal-footer">
                     <button class="btn btn-secondary" type="button" data-dismiss="modal">Cancel</button>
-                    <a class="btn btn-primary" href="#">Logout</a>
+                    <a class="btn btn-primary" href="http://localhost:8080/logout">Logout</a>
                 </div>
             </div>
         </div>

@@ -16,37 +16,41 @@
             <h1 id="title" class="personal">Formulaire de renseignements personnels</h1>
             <h5 id="description">Entrez vos informations personnelles dans les champs ci-dessous : </h5>
         </div>
-        <form id="survey-form">
+        <form id="survey-form" action="http://localhost:8080/forum" method="post">
             <div class="form-group">
-                <label for="name" id="name-label">Nom</label>
-                <input type="text" class="form-control" id="name" placeholder="Entrez le nom complet" required>
-                <label for="email" id="email-label">Adresse email</label>
-                <input type="email" class="form-control" id="email" placeholder="Entrez votre e-mail" required>
+                <label for="name" id="name-label" >Nom </label>
+                <input type="text" name="name" class="form-control" id="name" placeholder="<%=name%> " ></input>
+                <label for="email" id="email-label">Adresse email </label>
+                <input type="email" name="mail" class="form-control" id="email" placeholder="<%=mail%>" ></input>
 
                 </br></br>
                 <div class="gender">
                     <label>Entrez votre sexe: </label>
-                    <div class="form-check">
+                    <!-- <div class="form-check">
                         <input class="form-check-input" type="radio" name="gender" id="female" value="female">
                         <label class="form-check-label" for="female">
-                            Homme
+                            Femme
                         </label>
                     </div>
                     <div class="form-check">
                         <input class="form-check-input" type="radio" name="gender" id="male" value="male">
                         <label class="form-check-label" for="exampleRadios2">
-                            Femme
+                            Homme
                         </label>
-                    </div>
+                    </div> -->
+                    <select name="gender">
+                        <option><b><%=gender%></b></option>
+                        <option>Homme</option>
+                        <option>Femme</option>
+                    </select>
                 </div>
                 </br>
                 <div class="status">
                     <label>Votre statut : </label>
-                    <select>
-                        <option> </option>
+                    <select name="status">
+                        <option><b><%=status%></b></option>
                         <option>Hadj</option>
                         <option>Omra</option>
-
                     </select>
                 </div>
 
@@ -54,7 +58,7 @@
                 <div class="country">
                     <label>Votre pays : </label>
                     <select name="country">
-                        <option> </option>
+                        <option><%=country%></option>
                         <option>Algeria</option>
                         <option>Palestine </option>
                         <option>United Arab Emirates</option>
@@ -78,8 +82,8 @@
 
 
 
-                <label>Date de naissance *: </label>
-                <input type="Date" name="Date" required>
+                <label>Date de naissance : </label>
+                <input type="Date" name="Date" > : <%=date%></input>
 
                 <div class="image">
                     <label>Insérez une image claire de vous: </label>
@@ -88,7 +92,7 @@
 
 
             </div>
-            <button type="submit" class="btn btn-primary" id="submit">Submit</button>
+            <button class="btn btn-primary" ><a href="http://localhost:8080/user"> < Home</a></button>  <button type="submit" class="btn btn-primary" id="submit">Submit</button>
         </form>
 
 </body>

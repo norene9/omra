@@ -13,7 +13,7 @@ signInButton.addEventListener('click', () =>
 
 
 
-//to show or hide password    
+//to show or hide password
 function show() {
     var p = document.getElementById('pwd');
     p.setAttribute('type', 'text');
@@ -58,4 +58,3 @@ document.getElementById("eye2").addEventListener("click", function () {
         hide2();
     }
 }, false);
-

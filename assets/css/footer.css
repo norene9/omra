@@ -98,7 +98,14 @@ ul.social_iconf li a:hover {
 .rowf img{
       position: relative;
     top: 365px;
-    left: 903.4PX;
+        left: 896.4PX;
 }
 
+
+
 /** end footer **/
+.rowf img {
+    position: relative;
+    top: 365px;
+    left: 896.4PX;
+}

@@ -11,9 +11,3 @@ html, body{
     float:left;
 }
 
-#myMap{
-    position:relative;
-    width:calc(100% - 380px);
-    height:100%;
-    float:left;
-}
