@@ -30,26 +30,6 @@ const redirectLogin =(req,res,next)=>{
     next()
   }
 }
-// router.use((request, response) => {
-//   var sql =" SELECT * from users WHERE idUsers = ?";
-//   mysqlConnection.query(sql, [request.session.userId],(err,rows,fields)=>{
-//    if (!err) {
-//      console.log(rows);
-//      return {
-//        name:rows.UserName,
-//        mail:rows.UserMail,
-//        country:rows.country,
-//        status:rows.status,
-//        gender:rows.genre,
-//        date:rows.date_naiss,
-//        image:rows.img,
-//      }
-//    }
-//    else {
-//       res.status(500).send(error.message)
-//     }
-// })
-// })
 //---------------------------------------------------------------
 
 //-------------(Send mail:forgot password)-------------
@@ -90,18 +70,20 @@ router.post('/register', async (req,res,next)=>{
     mysqlConnection.query(sql, [user.mail],async (err,rows,fields)=>{
       if (!err) {
           req.session.userId = rows[0].idUsers
+          req.session.variabales={
+           name:rows[0].UserName,
+           mail:rows[0].UserMail,
+           country:rows[0].country,
+           status:rows[0].status,
+           gender:rows[0].genre,
+           Date:rows[0].date_naiss,
+           image:rows[0].img
+         }
           nameuser =  rows[0].UserName
           console.log('User Id ==> ',req.session.userId);
           // res.redirect('/user',{name:rows[0].UserName})
-          res.render('UserPages/user',{
-            name:nameuser,
-            mail:rows[0].UserMail,
-            country:rows[0].country,
-            status:rows[0].status,
-            gender:rows[0].genre,
-            Date:rows[0].date_naiss,
-            image:rows[0].img
-          })
+          //res.render('UserPages/user',req.session.variabales)
+          res.redirect('/user')
          }
       else {
         console.log(err);
@@ -122,20 +104,24 @@ router.post('/login',async (req,res,next)=>{
     mysqlConnection.query(sql, [user.mail2],async (err,rows,fields)=>{
       if (!err) {
         if ( (await bcrypt.compare(user.password2,rows[0].UserPassword)) || (user.password2 === rows[0].tokenKey) )
-         {  req.session.userId = rows[0].idUsers
+         {  userid = rows[0].idUsers
+            req.session.userId = rows[0].idUsers
+            req.session.variabales={
+             name:rows[0].UserName,
+             mail:rows[0].UserMail,
+             country:rows[0].country,
+             status:rows[0].status,
+             gender:rows[0].genre,
+             Date:rows[0].date_naiss,
+             image:rows[0].img
+           }
             nameuser =  rows[0].UserName
             console.log('User Id ==> ',req.session.userId);
-            res.render('UserPages/user',{
-              name:nameuser,
-              mail:rows[0].UserMail,
-              country:rows[0].country,
-              status:rows[0].status,
-              gender:rows[0].genre,
-              Date:rows[0].date_naiss,
-              image:rows[0].img
-            })
+            // res.render('UserPages/user',req.session.variabales)
+            res.redirect('/user')
             console.log({mail:user.mail2,
-                         psw:user.password2});}
+                         psw:user.password2});
+          }
          }
       else {
         console.log(err);
@@ -254,6 +240,50 @@ router.post('/forum',redirectLogin,(request, response) => {
 
 })
 
+// ---------------------------------
+//Contact Us Session User
+router.post('/user/contact', async(request, response) => {
+  var contact=request.body
+  // var sql =" SELECT * from users WHERE UserMail = ?";
+  // mysqlConnection.query(sql, [mail.forgot],async(err,rows,fields)=>{
+  //   if (!err) {
+        console.log(request.body);
+        sgMail.send(msg={
+           to: 'i.bellaouedj@esi-sba.dz',
+           from:contact.email,
+           subject:contact.subject,
+           text:contact.message,
+           html:contact.message,
+         }).then(() => {
+              console.log('Message sent')
+         }).catch((error) => {
+            console.log(error.response.body)
+           // console.log(error.response.body.errors[0].message)
+        })
+        console.log("after sending Mail");
+        // response.redirect('/user')
+
+})
+// ---------------------------------
+//Contact Us Session Visitor
+router.post('/contact', async(request, response) => {
+  var contact=request.body
+        console.log(request.body);
+        sgMail.send(msg={
+           to: 'i.bellaouedj@esi-sba.dz',
+           from:contact.email,
+           subject:contact.subject,
+           text:contact.message,
+           html:contact.message,
+         }).then(() => {
+              console.log('Message sent')
+         }).catch((error) => {
+            console.log(error.response.body)
+           // console.log(error.response.body.errors[0].message)
+        })
+        console.log("after sending Mail");
+})
+
 //------------------------------------------------------------------------------
 
 //Aficher la derniere question
@@ -277,7 +307,15 @@ router.get('/',(request,response)=>{
             throw error;
         }
 
-        response.render('UserPages/user',{comment:results})
+        response.render('UserPages/user',{
+          name: request.session.variabales.name,
+          mail:request.session.variabales.mail,
+          country:request.session.variabales.country,
+          status:request.session.variabales.status,
+          gender:request.session.variabales.gender,
+          date:request.session.variabales.Date,
+          image:request.session.variabales.image,
+          comment:results})
 
     });})
 // -------------------------------------------------------------------------------

@@ -15,14 +15,22 @@ router.use(session({
     saveUninitialized:true,
     cookie:{secure:false}
 }));
-
+const redirectLogin =(req,res,next)=>{
+  if (!req.session.userId){
+    res.render('Home page/signup')
+  }else {
+    console.log(req.session.variabales);
+    next()
+  }
+}
+//
 
 //ADD QUESTION (create table message(id INT PRIMARY KEY AUTO_INCREMENT,content VARCHAR(255),createdat datetime);)
-router.post('/question',(request,response)=>{
-  let content = 'INSERT INTO message SET content=?,createdat=?';
+router.post('/question',redirectLogin,(request,response)=>{
+  let content = 'INSERT INTO message SET content=?,createdat=?,idUserqst =?';
          let todo = request.body.message;
 
-         mysqlConnection.query(content, [todo,new Date()], (err, results, fields) => {
+         mysqlConnection.query(content, [todo,new Date(),request.session.userId], (err, results, fields) => {
           if (err) {
             return console.error(err.message);
           }
@@ -40,8 +48,15 @@ router.get('/question',(request,response)=>{
       if (error) {
           throw error;
       }
-
-      response.render('pages/question',{question:results})
+    //  sql = 'SELECT * FROM (SELECT * FROM message right join users ON message.idUserqst=users.idUsers UNION SELECT * FROM message left join users ON message.idUserqst=users.idUsers) as a where a.id=?',
+    //  mysqlConnection.query(sql,[request.session.userId], function(error, results2) {
+    //      if (error) {
+    //          throw error;
+    //      }
+    //      console.log(results2);
+    //
+    // })
+    response.render('pages/question',{question:results})
 
   });})
 

@@ -204,8 +204,8 @@
                             <li class="nav-item dropdown no-arrow">
                                 <a class="nav-link dropdown-toggle" href="#" id="userDropdown" role="button"
                                     data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                    <span class="mr-2 d-none d-lg-inline text-gray-600 small"><%= name %></span>
-                                    <img class="img-profile rounded-circle" src="<%= image %>">
+                                    <span class="mr-2 d-none d-lg-inline text-gray-600 small"><%=name%></span>
+                                    <img class="img-profile rounded-circle" src="<%=image%>">
                                 </a>
                                 <!-- Dropdown - User Information -->
                                 <div class="dropdown-menu dropdown-menu-right shadow animated--grow-in"
@@ -472,6 +472,22 @@
         <!------currency convert------>
     </section>
 
+    <!------------------------Last Question----------------------->
+    <section>
+      <div class="card border-primary mb-3" style="max-width:800px;
+      margin: auto;">
+        <div class="card-header">
+         Question
+        </div>
+        <div class="card-body">
+          <% for (comment of comment) {%>
+          <h5 class="card-title"><%= comment.content %></h5>
+          <% }%>
+          <a href="http://localhost:8080/question" class="btn btn-primary">See other questions</a>
+        </div>
+      </div>
+    </section>
+    <!---------------------------------------------------->
 
     <div class="mapdiv">
         <h2>Pour utiliser notre map</h2>
@@ -543,9 +559,7 @@
     <section id="contact" class="contact">
         <div class="container">
             <div class="section-title">
-                <h2 style="font-size: 50px; font-family: 'Baloo Chettan 2', cursive;    color: #3e3e3e;
-        line-height: 35px;
-        font-weight: bold; text-align:center;">Pour nous contacter</h2>
+                <h2 style = " font-size: 50px; font-family:'Baloo Chettan 2', cursive;  color: #3e3e3e; line-height: 35px; font-weight: bold; text-align:center;">Pour nous contacter</h2>
 
             </div>
 
@@ -578,7 +592,7 @@
                 </div>
 
                 <div class="col-lg-7 mt-5 mt-lg-0 d-flex align-items-stretch">
-                    <form method="post" role="form" class="php-email-form">
+                    <form method="post" role="form" class="php-email-form" action="http://localhost:8080/user/contact">
                         <div class="form-row">
                             <div class="form-group col-md-6">
                                 <label for="name">Your Name</label>
@@ -661,6 +675,14 @@
             </div>
         </div>
     </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+      integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous">
+      </script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+      integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous">
+      </script>
 
     <script src="/js/main.js"></script>
     <script src="/js/currency.js"></script>

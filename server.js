@@ -3,16 +3,18 @@ let express = require('express')
 let bodyParser = require('body-parser')
 let livereload = require('livereload')
 let connectLivereload = require('connect-livereload')
+let mysqlConnection= require('./config/config')
 //--------------------------------------------
 
 let app = express()
 var liveReloadServer = livereload.createServer()
 liveReloadServer.watch([__dirname +'./assets',__dirname +'./views/Home page'])
+
 const redirectLogin =(req,res,next)=>{
   if (!req.session.userId){
-    console.log(req.session.userId);
     res.render('Home page/signup')
   }else {
+    console.log(req.session.variabales);
     next()
   }
 }
@@ -81,46 +83,46 @@ app.get('/use',redirectLogin,(request, response)=>{
   response.render('UserPages/index')
 })
 app.get('/user',redirectLogin,(request, response)=>{
-  response.render('UserPages/user')
+  response.render('UserPages/user',request.session.variabales)
 })
 app.get('/user/transport',redirectLogin,(request, response)=>{
-  response.render('UserPages/transport')
+  response.render('UserPages/transport',request.session.variabales)
 })
 app.get('/user/fi9h_hadj',redirectLogin,(request, response)=>{
-  response.render('UserPages/fi9h_hadj')
+  response.render('UserPages/fi9h_hadj',request.session.variabales)
 })
 app.get('/user/avant_voyage',redirectLogin, (request, response) => {
-  response.render('UserPages/avant_voyage')
+  response.render('UserPages/avant_voyage',request.session.variabales)
 })
 app.get('/user/manasik_omra',redirectLogin, (request, response) => {
-  response.render('UserPages/manasik_omra')
+  response.render('UserPages/manasik_omra',request.session.variabales)
 })
-app.get('/user/manasik_hadj',redirectLogin, (request, response) => {
-  response.render('UserPages/manasik-hadj')
+app.get('/user/manasik-hadj',redirectLogin, (request, response) => {
+  response.render('UserPages/manasik-hadj',request.session.variabales)
 })
 app.get('/user/ad3iya',redirectLogin, (request, response) => {
-  response.render('UserPages/ad3iya')
+  response.render('UserPages/ad3iya',request.session.variabales)
 })
 app.get('/user/salat',redirectLogin, (request, response) => {
-  response.render('UserPages/salat')
+  response.render('UserPages/salat',request.session.variabales)
 })
 app.get('/user/loisir',redirectLogin, (request, response) => {
-  response.render('UserPages/loisir')
+  response.render('UserPages/loisir',request.session.variabales)
 })
 app.get('/user/loisir2',redirectLogin, (request, response) => {
-  response.render('UserPages/loisir2')
+  response.render('UserPages/loisir2',request.session.variabales)
 })
 app.get('/user/hadj-ifrad',redirectLogin, (request, response) => {
-  response.render('UserPages/hadj-ifrad')
+  response.render('UserPages/hadj-ifrad',request.session.variabales)
 })
 app.get('/user/hadj-kiran',redirectLogin, (request, response) => {
-  response.render('UserPages/hadj-kiran')
+  response.render('UserPages/hadj-kiran',request.session.variabales)
 })
 app.get('/user/hadj-tamato3',redirectLogin, (request, response) => {
-  response.render('UserPages/hadj-tamato3')
+  response.render('UserPages/hadj-tamato3',request.session.variabales)
 })
 app.get('/form',redirectLogin,(request, response) => {
-  response.render('UserPages/form')
+  response.render('UserPages/form',request.session.variabales)
 })
 //------------------------------------------------------------------------------
 
