@@ -9,9 +9,9 @@
   }</style>
 <div class="card bg-light mb-3 border-primary mb-3" style=" max-width: 800px;
 margin: auto;" >
-    <div class="card-header">Question</div>
+    <div class="card-header"><%= question.userNameQst%></div>
     <div class="card-body">
-      <h5 class="card-title">Username</h5>
+
 
 
       <p class="card-text"><%= question.content%></p>
@@ -41,12 +41,12 @@ margin: auto;" >
               <tr>
         <div class="card border-primary mb-3">
             <div class="card-header">
-              username
+              <%= answer[i].userNameRes %>
             </div>
             <div class="card-body">
               <blockquote class="blockquote mb-0">
                 <p><%= answer[i].cont %></p>
-
+                <a  class="card-link" type="submit" href="http://localhost:8080/question/Adelete/<%=answer[i].idr%>" value="Delete">Delete</a>
                 <%} else {%>
             </p></p>
 
@@ -63,9 +63,3 @@ margin: auto;" >
 
     </table>
   </div>
-
-
-
-
-
- 

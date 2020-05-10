@@ -14,7 +14,7 @@
     <tr>
     <div class="card  border-primary mb-3" style="width: 100%; margin: auto">
       <div class="card-header">
-      username
+        <%= question.userNameQst %>
       </div>
       <div class="card-body">
       <p class="card-text"> <div class="comment">
@@ -27,7 +27,9 @@
                 </form>
               </div>
         <br></p>
+        <% if(question.idUserqst === userid) {%>
         <a  class="card-link" type="submit" href="http://localhost:8080/question/delete/<%=question.id%>" value="Delete">Delete</a>
+        <%}%>
         <a  class="card-link" type="submit" href="http://localhost:8080/question/answer/<%= question.id %>" value="answer" method="get">View answers</a>
       </div>
       <div class="card-footer text-muted">

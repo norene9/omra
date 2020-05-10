@@ -106,6 +106,7 @@ router.post('/login',async (req,res,next)=>{
         if ( (await bcrypt.compare(user.password2,rows[0].UserPassword)) || (user.password2 === rows[0].tokenKey) )
          {  userid = rows[0].idUsers
             req.session.userId = rows[0].idUsers
+            req.session.userName = rows[0].UserName
             req.session.variabales={
              name:rows[0].UserName,
              mail:rows[0].UserMail,
@@ -295,7 +296,7 @@ router.get('/',(request,response)=>{
           throw error;
       }
 
-      response.render('Home page/index',{comment:results})
+      response.render('Home page/index',{comment:results,name: request.session.variabales.name})
 
   });})
 //------------Afficher la derniere question User session------------------------
