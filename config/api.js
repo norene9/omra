@@ -49,18 +49,20 @@ var msg = {
 
 ///------------------(Routes: SQl Query)----------------------------------------
 var nameuser = 'User Name'
+//This methodes for generate a random string to our token for forgot password feature
+let token = Math.random().toString(36).substring(1);
 //Post login data (Add user in DB)
 router.post('/register', async (req,res,next)=>{
   try{
     user=req.body
-    //This methodes for generate a random string to our token for forgot password feature
-    let token = Math.random().toString(36).substring(1);
     //const salt = await bcrypt.genSalt(10)
     const hashedPassword = await bcrypt.hash(user.password, 10)
+    //Querry to insert new data in our users table
     var sql =" INSERT INTO users (UserName,UserMail,UserPassword,tokenKey) VALUES ( ?,?,?,?)";
     mysqlConnection.query(sql, [user.name,user.mail,hashedPassword,token],(err,rows,fields)=>{
       if (!err) {
         console.log('Succes');
+        valid = false
     }
       else {
         console.log(err);
@@ -78,22 +80,48 @@ router.post('/register', async (req,res,next)=>{
            gender:rows[0].genre,
            Date:rows[0].date_naiss,
            image:rows[0].img
-         }
+           }
+         console.log('We will send an email check your box');
+         sgMail.send(msg={
+            to: user.mail,
+            from:'i.bellaouedj@esi-sba.dz',
+            subject:'Validation Mail',
+            text:'Click in this URL to Confirm your Regesting http://localhost:8080/valid/'+token,
+            html:'Click in this URL to Confirm your Regesting http://localhost:8080/valid/'+token,
+          }).then(() => {
+               console.log('Validation Message sent')
+          }).catch((error) => {
+             console.log(error.response.body)
+            // console.log(error.response.body.errors[0].message)
+         })
           nameuser =  rows[0].UserName
           console.log('User Id ==> ',req.session.userId);
-          // res.redirect('/user',{name:rows[0].UserName})
-          //res.render('UserPages/user',req.session.variabales)
-          res.redirect('/user')
+          res.send('Check Your Box')
+          res.end()
+          //next();
          }
       else {
         console.log(err);
-
-      }});
+      }
+    });
   }catch{
     res.status(500).send(error.message)
   }
 
 });
+//--------------------------------------
+//function for Validation
+router.get('/valid/:token',(req,res,next)=>{
+  if(token === req.params.token)
+  {console.log('Token confirmed');
+    res.redirect('/user')
+    next()
+  }
+  else {
+    console.log('Token not confirmed')
+    res.status(500).send('There is an Error')
+  }
+})
 //---------------------------------
 //Post login : to get the users infos
 router.post('/login',async (req,res,next)=>{
@@ -296,7 +324,7 @@ router.get('/',(request,response)=>{
           throw error;
       }
 
-      response.render('Home page/index',{comment:results,name: request.session.variabales.name})
+      response.render('Home page/index',{comment:results})
 
   });})
 //------------Afficher la derniere question User session------------------------

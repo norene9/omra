@@ -30,14 +30,23 @@ mysqlConnection.connect((err)=>{
           #UserName    :VARCHAR(45) NOT NULL;
           #UserMail    :VARCHAR(45) NOT NULL,UNIQUE;
           #UserPassword:VARCHAR(20) NOT NULL,UNIQUE;
+          #tokenKey    :varchar(45) NOT NULL ,
+		      #status      :varchar(45) ,
+          #country     :varchar(45) ,
+		      #genre       :varchar(20) ,
+          #date_naiss  :date ,
+          #img         :blob,
    -message =>:
           #id       :INT PRIMARY KEY AUTO_INCREMENT;
           #content  : VARCHAR(255);
           #createdat: datetime;
+          #idUserqst: int(11) NOT NULL ,
+          #userNameQst: varchar(45) NOT NULL,
    -reply =>:
           #idr : INT PRIMARY KEY AUTO_INCREMENT;
           #cont: VARCHAR(255);
           #qid : INT;
+          #userNameRes varchar(45) NOT NULL,
 */
 
 module.exports= mysqlConnection
