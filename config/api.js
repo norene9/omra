@@ -55,6 +55,7 @@ let token = Math.random().toString(36).substring(1);
 router.post('/register', async (req,res,next)=>{
   try{
     user=req.body
+    req.session.register= false;
     //const salt = await bcrypt.genSalt(10)
     const hashedPassword = await bcrypt.hash(user.password, 10)
     //Querry to insert new data in our users table
@@ -62,7 +63,8 @@ router.post('/register', async (req,res,next)=>{
     mysqlConnection.query(sql, [user.name,user.mail,hashedPassword,token],(err,rows,fields)=>{
       if (!err) {
         console.log('Succes');
-        valid = false
+        req.session.register= true;
+        console.log('Register is true');
     }
       else {
         console.log(err);
@@ -71,6 +73,7 @@ router.post('/register', async (req,res,next)=>{
     sql ="SELECT * from users WHERE UserMail = ? ";
     mysqlConnection.query(sql, [user.mail],async (err,rows,fields)=>{
       if (!err) {
+
           req.session.userId = rows[0].idUsers
           req.session.variabales={
            name:rows[0].UserName,
@@ -335,7 +338,7 @@ router.get('/',(request,response)=>{
         if (error) {
             throw error;
         }
-
+        console.log('Register in render user :===> ',request.session.register);
         response.render('UserPages/user',{
           name: request.session.variabales.name,
           mail:request.session.variabales.mail,
@@ -344,7 +347,9 @@ router.get('/',(request,response)=>{
           gender:request.session.variabales.gender,
           date:request.session.variabales.Date,
           image:request.session.variabales.image,
+          register:request.session.register,
           comment:results})
+        request.session.register= false
 
     });})
 // -------------------------------------------------------------------------------
