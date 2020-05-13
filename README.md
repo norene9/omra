@@ -17,22 +17,26 @@
    *Create the tables: (this are instructions ready to execute)
       create table users(idUsers INT(11) PRIMARY KEY AUTO_INCREMENT,
 	     UserName varchar(45) NOT NULL ,
-		   UserMail varchar(45) NOT NULL UNIQUE,
+	     UserMail varchar(45) NOT NULL UNIQUE,
 	     UserPassword varchar(60) NOT NULL UNIQUE,
-		   tokenKey varchar(45) NOT NULL ,
-		   status varchar(45) ,country varchar(45) ,
-		   genre varchar(20) ,date_naiss date ,img blob
+             tokenKey varchar(45) NOT NULL ,
+	     status varchar(45) ,country varchar(45) ,
+   	     genre varchar(20) ,date_naiss date ,img blob
       );
+      
+      
       create table message(id INT PRIMARY KEY AUTO_INCREMENT NOT NULL UNIQUE,
         content VARCHAR(255)NOT NULL UNIQUE,
-		    createdat datetime,
-		    idUserqst int(11) NOT NULL ,
-		    userNameQst varchar(45) NOT NULL
+        createdat datetime,
+        idUserqst int(11) NOT NULL ,
+        userNameQst varchar(45) NOT NULL
       );
-      create table reply(idr INT PRIMARY KEY AUTO_INCREMENT NOT NULL UNIQUE,
+      
+      
+      *create table reply(idr INT PRIMARY KEY AUTO_INCREMENT NOT NULL UNIQUE,
 		   cont VARCHAR(255),
-		   qid int(11) ,
-       userNameRes varchar(45) NOT NULL
+                   qid int(11) ,
+                   userNameRes varchar(45) NOT NULL
        );
 
     *Go to hadj_omra_repo/config/config.js ==> then change:
