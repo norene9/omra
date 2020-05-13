@@ -2,19 +2,30 @@
 ...
 
 *How to run this project:
+
 1/Make sure that you had NodeJs in your machine if not Download it from : https://nodejs.org/en/.
  And MySql Server if not Download it from : https://www.mysql.com/fr/downloads/
  (it's recommended to install MySql WorkBench, it's eazy to controll the data from it)
 
 2/Then install the Dependencies :
+ 
  -Open your command line and go to the project repository: cd C:/UserName/.../Hadj-Omra-Project
+ 
  -then execute this commandes:
+   
    * npm install
+  
    * npm nodemon
+
+
  -In your database commande line or in WorkBench (MySql Server):
+   
+   
    *Create a new Schema
 
+
    *Create the tables: (this are instructions ready to execute)
+   
       create table users(idUsers INT(11) PRIMARY KEY AUTO_INCREMENT,
 	     UserName varchar(45) NOT NULL ,
 	     UserMail varchar(45) NOT NULL UNIQUE,
