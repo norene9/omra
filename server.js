@@ -5,6 +5,8 @@ let livereload = require('livereload')
 let connectLivereload = require('connect-livereload')
 let mysqlConnection= require('./config/config')
 const port = process.env.PORT || 8080;
+var http = require('http');
+
 //--------------------------------------------
 
 let app = express()
@@ -136,6 +138,8 @@ app.post('/', (request, response) => {
 //----------------------------------------------------------------------
 
 //Listing to the server
-app.listen(, ()=>{
-  console.log('Server is running on port 8080...');
-})
+const server = http.createServer((request, response) => {
+    response.writeHead(200, {"Content-Type": "text/plain"});
+   
+});
+server.listen(port);
